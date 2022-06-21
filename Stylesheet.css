@@ -1,0 +1,92 @@
+
+
+/*--The main header on the page.--*/
+  h1  {
+    color: #351837;
+    font-size: 5em;
+    font-family: Helvetica, sans-serif;
+    margin-bottom: .3em;
+    margin-left: 30px;
+    text-align: left;
+    text-decoration: none;
+  }
+  
+/*--The secondary header on the page.--*/
+  h2  {
+    color: #351837;
+    font-size: 2em;
+    font-family: Helvetica, sans-serif;
+    margin-bottom: .3em;
+    margin-left: 30px;
+    text-align: left;
+    text-decoration: none;
+  }
+
+a {
+  color: #fcf4db;
+text-decoration: none;
+}
+
+
+/*--This is the table itself--*/
+  table {
+    margin-left: 30px; /*This is the margin around the entire table.*/
+    width: 600px; /*This sets the width of the entire table.*/
+  }
+  
+
+/*--This is the table header only--*/
+  th {
+    padding:15px;
+  }
+  
+
+/*--This is the table data only--*/
+  td {
+    background-color: #262945; 
+    color: #fcf4db;
+    font-family: Helvetica, sans-serif;
+    border: 2px solid #dddddd;
+    padding: 15px;
+    
+  }
+  
+/*--the table header--*/
+/*--the # (id selector) applies only to the header row--*/
+
+  #trHeader {
+    color: #879034;
+    font-family: Helvetica, sans-serif;
+    text-decoration: none;
+    text-align: left;
+  }
+  
+/*--the . (class selector) applies to all data rows--*/
+
+  .centerInCell {
+    text-align: center;
+    text-decoration: none;
+  }
+
+  .leftInCell {
+    text-align: left;
+    text-decoration: none;
+  }
+
+
+.thumbnail { 
+top:-50px; 
+left:-35px; 
+display:block; 
+z-index:999; 
+cursor: pointer; 
+-webkit-transition-property: all; 
+-webkit-transition-duration: 0.3s; 
+-webkit-transition-timing-function: ease; 
+} 
+
+/*change the number below to scale to the appropriate size*/ 
+.thumbnail:hover { 
+transform: scale(3); 
+
+}
