@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Functions</h2>
+
+<p>New animal:</p><p id="demo"></p>
+
+<p>
+        <button type="button" onclick="changeAnimal(animal1, 'moose')">Change to Moose</button>
+        <button type="button" onclick="changeAnimal(animal1, 'duck')">Change to Duck</button>
+        <button type="button" onclick="changeAnimal(animal1, 'butterfly')">Change to Butterfly</button>
+</p>
+   
+<p>Old animal:</p><p id="demo2"></p>
+
+
+
+<script>
+var animal1 = "frog";
+var animal2 = "butterfly";
+var animal3 = "duck"
+var animal4 = "goose"
+
+document.getElementById("demo").innerHTML = animal1;
+document.getElementById("demo2").innerHTML = animal2;
+//document.getElementById("demo").innerHTML = myFunction("duck", animal2);
+
+function changeAnimal(p1, p2) {
+  document.getElementById("demo").innerHTML = p2;
+  document.getElementById("demo2").innerHTML = p1;
+  animal1 = p2
+  //animal1 = p2
+  //animal2 = p1;
+  //return animal2;
+}
+
+</script>
+
+</body>
+</html>

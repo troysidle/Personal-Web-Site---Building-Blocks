@@ -1,0 +1,34 @@
+body {
+  background-color: whitesmoke;
+}
+
+h1 {
+  margin-left: 25px;
+  padding: 7px;
+}
+
+p {
+  margin-left: 25px;
+  padding: 7px;
+}
+
+
+.coolColorScheme{
+        background: lightblue;
+      	color: darkblue;
+    }
+
+.warmColorScheme{
+        background: orange;
+       	color: darkred;
+    
+
+    }
+
+.greyColorScheme{
+        background: lightgrey;
+       	color: darkslategray;
+    
+
+    }
+
