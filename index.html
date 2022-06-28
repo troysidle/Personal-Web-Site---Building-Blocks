@@ -18,18 +18,22 @@ This uses JavaScript to allow a user to choose amongst three or more CSS classes
     
 <h2>JavaScript Buttons to Change Page Apearance</h2>
 
-<div id="content" class=colorScheme>
+<div id="content">
         <h1>This is a heading</h1>
         <p>This is a paragraph of text.</p>
 </div>
     
+<!--Provide Buttons to use the changeScheme to alter the apearance of "content"-->
     
 <p>
-        <button type="button" onclick="changeScheme(situationA, 'coolColorScheme')">Change to Cool</button>
-        <button type="button" onclick="changeScheme(situationA, 'warmColorScheme')">Change to Warm</button>
-        <button type="button" onclick="changeScheme(situationA, 'greyColorScheme')">Change to Grey Scale</button>
+    <button type="button" onclick="changeScheme(current, 'coolColorScheme')">Change to Cool</button>
+    <button type="button" onclick="changeScheme(current, 'warmColorScheme')">Change to Warm</button>
+    <button type="button" onclick="changeScheme(current, 'greyColorScheme')">Change to Greys</button>
 </p>
-<p>New color scheme:</p><p id="newStyleClass"></p>
+    
+<!--Track and display the changes.-->
+    
+<p>Current color scheme:</p><p id="newStyleClass"></p>
 
 <br>   
 <p>Old color scheme:</p><p id="oldStyleClass"></p>
@@ -39,28 +43,28 @@ This uses JavaScript to allow a user to choose amongst three or more CSS classes
         // Selecting element
         var elem = document.getElementById("content");
         
-        var situationA;
-        var groupA = "colorScheme";
-
+        // Initial variable values
+        var start = 'none'
+        var current = 'NA';
+        var selected;
         
-        document.getElementById("newStyleClass").innerHTML = 'none';
-        document.getElementById("oldStyleClass").innerHTML = 'nothing';
         
+        // Get the values to display.
+        document.getElementById("oldStyleClass").innerHTML = current;
+        document.getElementById("newStyleClass").innerHTML = start;
+        
+        // Remove old color display and replace with new.
         function changeScheme(p1, p2) {
-        document.getElementById("newStyleClass").innerHTML = p2;
         document.getElementById("oldStyleClass").innerHTML = p1;
+        document.getElementById("newStyleClass").innerHTML = p2;
 
+        // Remove old color scheme and replace with new.    
         elem.classList.remove(p1);  
         elem.classList.add(p2);  
-        situationA = p2;
-        }
             
-        function changeColorScheme(p1, p2) {
-        groupA = p2;
-    
-    
-        }
-        
+        // Reset the current scheme.
+        current = p2;
+        }     
     </script>
     
 
