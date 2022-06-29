@@ -1,91 +1,70 @@
-<!DOCTYPE HTML>
-<html>
-    
+<!DOCTYPE html>
+<html lang="en-us">
+<meta charset="UTF-8">
+<title>Change an Element's Class with JavaScript</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="main.css">
+
 <!-- ====================================================
-Name: Building Blocks - v1.2.1
+Name: Building Block - JavaScript for Class Changes
 Author: Troy Sidle
 
-This main site is now called "Under Construction", whereas individual pages used to test code are separate and named respectively.
-
-The site is now updated with more complext styles. The main image resizes, and the sections "Education" and "Work Experience" have been updated with colors in a uniform palette. 
-
-v1.2.1 Update: CSS coding for alternating sections.
+This uses JavaScript to allow a user to choose amongst three or more CSS classes to alter the apearance of a defined element. In this case, the element is <body>.
 ======================================================== -->    
 
-
+<body id="content">
     
+<h2>JavaScript Buttons to Change Page Apearance</h2>
+
+<div>
+        <h1>This is a heading</h1>
+        <p>This is a paragraph of text.</p>
+</div>
     
-<head>
-<meta charset="UTF-8">
-<title>CSS Testing</title>
-<link href="Stylesheet.css" rel="stylesheet">
-</head>
-
-
-<body>
-
-
-
-<!-- The sections are the main content of the website. -->    
-<section class="hero-image">
-    <div class="hero-text">
-    <h1 style="font-size:50px">Troy Sidle</h1>
-    <h2>Designer</h2>    
-    </div>
-</section>
+<!--Provide Buttons to use the changeScheme to alter the apearance of "content"-->
     
-<section class="sectionBackground"> 
-<h3>Education
-</h3>
 <p>
-Bachelor of Arts, Computer Science						
-Harding University, Searcy, AR 
+    <button type="button" onclick="changeScheme(current, 'coolColorScheme')">Change to Cool</button>
+    <button type="button" onclick="changeScheme(current, 'warmColorScheme')">Change to Warm</button>
+    <button type="button" onclick="changeScheme(current, 'greyColorScheme')">Change to Greys</button>
 </p>
-<p>
-December 2000
-</p>
-</section> 
+    
+<!--Track and display the changes.-->
+    
+<p>Current color scheme:</p><p id="newStyleClass"></p>
 
-<section class="sectionBackground">
-<h3>Work Experience
-</h3>
-<h4>
-The Dinex Group, New York, NY
-</h4>
-<p>2/2022 – 5/2022
-</p>
-<p>Director of Cocktails
-</p> 
-<p>
-Developing new bar programs with an emphasis on cocktail experiences
-</p>
-<p>
-Creating systems and standards for existing bar and cocktail programs 
-</p>
-</section>
+<br>   
+<p>Old color scheme:</p><p id="oldStyleClass"></p>
+    
+    
+    <script>
+        // Selecting element
+        var elem = document.getElementById("content");
+        
+        // Initial variable values
+        var start = 'none'
+        var current = 'NA';
+        var selected;
+        
+        
+        // Get the values to display.
+        document.getElementById("oldStyleClass").innerHTML = current;
+        document.getElementById("newStyleClass").innerHTML = start;
+        
+        // Remove old color display and replace with new.
+        function changeScheme(p1, p2) {
+        document.getElementById("oldStyleClass").innerHTML = p1;
+        document.getElementById("newStyleClass").innerHTML = p2;
 
+        // Remove old color scheme and replace with new.    
+        elem.classList.remove(p1);  
+        elem.classList.add(p2);  
+            
+        // Reset the current scheme.
+        current = p2;
+        }     
+    </script>
     
-    
-<!--
-
-
-    
-    
-<h2>Batch Cocktails</h2>    
-    
-    
-<button onclick="document.getElementById('BookCover').style='width:50px'">Smaller Image</button>
-
-    
-    
-<img id="BookCover" src="https://storage.googleapis.com/buckethalffull/CSS%20Testing/BookCoverBatchCocktails.jpeg" style="width:100px">
-
-    
-    
-<button onclick="document.getElementById('BookCover').style='width:300px'">Larger Image</button>  
-    
-
--->
 
 </body>
 </html>
