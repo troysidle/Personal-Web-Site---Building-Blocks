@@ -1,91 +1,83 @@
-<!DOCTYPE HTML>
-<html>
+<!DOCTYPE html>
+<html lang="en-us">
+<meta charset="UTF-8">
+<title>Pastel Sketches</title>
     
 <!-- ====================================================
-Name: Building Blocks - v1.2.1
+Name: Building Block - Navigation Menu
 Author: Troy Sidle
 
-This main site is now called "Under Construction", whereas individual pages used to test code are separate and named respectively.
+This uses CSS to style a static navigation bar. The navigation bar text changes on hover.
+======================================================== -->  
 
-The site is now updated with more complext styles. The main image resizes, and the sections "Education" and "Work Experience" have been updated with colors in a uniform palette. 
-
-v1.2.1 Update: CSS coding for alternating sections.
-======================================================== -->    
-
-
-    
-    
-<head>
-<meta charset="UTF-8">
-<title>CSS Testing</title>
-<link href="Stylesheet.css" rel="stylesheet">
-</head>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="main.css">
 
 
 <body>
+        
+<div class="sideNavigation">
 
+  <a class="active" href="#home">Home</a>
+  <a class="active" href="#education">Education</a>
+  <a class="active" href="#work-experience">Work Experience</a>
+  <a class="active" href="#portfolio">Portfolio</a>
 
-
-<!-- The sections are the main content of the website. -->    
-<section class="hero-image">
-    <div class="hero-text">
-    <h1 style="font-size:50px">Troy Sidle</h1>
-    <h2>Designer</h2>    
-    </div>
-</section>
+</div>
     
-<section class="sectionBackground"> 
-<h3>Education
-</h3>
-<p>
-Bachelor of Arts, Computer Science						
-Harding University, Searcy, AR 
-</p>
-<p>
-December 2000
-</p>
-</section> 
+<div class="main">
+<section id="home">
+<h1>HOME</h1>
+    
+<img src="LimePastel2.png" alt="Pastel Lime Drawing" style="width:100%">
 
-<section class="sectionBackground">
-<h3>Work Experience
-</h3>
-<h4>
-The Dinex Group, New York, NY
-</h4>
-<p>2/2022 – 5/2022
-</p>
-<p>Director of Cocktails
-</p> 
-<p>
-Developing new bar programs with an emphasis on cocktail experiences
-</p>
-<p>
-Creating systems and standards for existing bar and cocktail programs 
-</p>
+<div>
+  <h1>This is a Heading</h1>
+  <p>This is a paragraph.</p>
+  <p>This is another paragraph.</p>
+</div>
+
 </section>
 
+<section id="education">
+<h1>EDUCATION</h1>
     
-    
-<!--
+<img src="LimePastel2.png" alt="Pastel Lime Drawing" style="width:100%">
 
+<div>
+  <h1>This is a Heading</h1>
+  <p>This is a paragraph.</p>
+  <p>This is another paragraph.</p>
+</div>
 
+</section>
     
+<section id="work-experience">
+<h1>WORK EXPERIENCE</h1>
     
-<h2>Batch Cocktails</h2>    
-    
-    
-<button onclick="document.getElementById('BookCover').style='width:50px'">Smaller Image</button>
+<img src="LimePastel2.png" alt="Pastel Lime Drawing" style="width:100%">
 
-    
-    
-<img id="BookCover" src="https://storage.googleapis.com/buckethalffull/CSS%20Testing/BookCoverBatchCocktails.jpeg" style="width:100px">
+<div>
+  <h1>This is a Heading</h1>
+  <p>This is a paragraph.</p>
+  <p>This is another paragraph.</p>
+</div>
 
+</section>
     
+<section id="portfolio">
+<h1>PORTFOLIO</h1>
     
-<button onclick="document.getElementById('BookCover').style='width:300px'">Larger Image</button>  
-    
+<img src="LimePastel2.png" alt="Pastel Lime Drawing" style="width:100%">
 
--->
+<div>
+  <h1>This is a Heading</h1>
+  <p>This is a paragraph.</p>
+  <p>This is another paragraph.</p>
+</div>
 
+</section>
+</div>
+    
 </body>
 </html>
