@@ -1,0 +1,74 @@
+body {
+  background-color: lightyellow;
+  margin: 0;
+}
+
+h1 {
+  color: darkgreen;
+  margin-left: 25px;
+}
+
+p {
+  color: darkblue;
+  margin-left: 25px;
+}
+
+/* Attributes of the navigation bar */
+
+/*
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 200px;
+  background-color: lightblue;
+}
+
+li a {
+  display: block;
+  color: #000;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+*/
+
+/* Change the link color on hover 
+li a:hover {
+  background-color: #555;
+  color: white;
+}
+*/
+.active {
+  background-color: yellow;
+}
+
+
+
+.sideNavigation {
+  height: 100%;
+  width: 215px; /* Same as the width of the .main */
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: darkgoldenrod;
+  overflow-x: hidden;   
+  padding-top: 0px;
+}
+
+.sideNavigation a {
+  padding: 6px 6px 6px 6px;
+  text-decoration: none;
+  font-size: 30px;
+  color: teal;
+  display: block;
+}
+
+.sideNavigation a:hover {
+  color: turquoise;
+}
+
+.main {
+  margin-left: 215px; /* Same as the width of the sidenav */
+  padding: 0px 0px;
+}
