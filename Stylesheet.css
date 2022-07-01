@@ -1,8 +1,82 @@
 
 
-/*--The main header on the page.--*/
+/*--Establish the color scheme--*/
+
+/*--This color scheme is monochromatic in green tones--*/
+
+
+
+
+
+
+:root {
+
+    /* Color Schemes */
+
+
+/* Monochrome Green
+    These colors are monochrome in a green hue.
+*/
+
+--baseColorMonochromeGreen: #C1F5C6;
+
+--lightMonochromeGreen: #ADDBB1;
+
+--mediumMonochromeGreen: #93BA96;
+
+--darkMonochromeGreen: #283329;    
+    
+--contrastMonochromeGreen: #4F6350;
+
+
+
+
+/*Complementary Produce
+    These colors are complementary to green and resemble produce colors like blackberries and mango.
+*/
+
+
+--baseColorComplementaryProduce: #C1F5C6;
+
+--lightComplementaryProduce: #C5B8CF;
+
+--mediumComplementaryProduce: #786056;
+
+--darkComplementaryProduce: #33104A;
+
+--contrastComplementaryProduce: #CC511D;
+
+
+/*Complementary Vista
+    These colors are complementary to green and resemble a vista of wheat fields and blue sky.
+*/
+
+--baseColorComplementaryVista: #C1F5C6;
+
+--lightComplementaryVista: #F2EDB8;
+
+--mediumComplementaryVista: #9FE1F5;
+
+--darkComplementaryVista: #241066;
+
+--contrastComplementaryVista: #FF8F1F;
+
+    
+    
+    
+    
+    
+  --white: #ffffff;
+  --nearwhite: #f3f3f3;
+  --nearBlackTone: #434343;
+  --lighttone: #c8d8c2;
+  --mediumtone: #8e9c88;
+  --darktone: #596e44;
+}
+
+/*--The main header on the page.*/
   h1  {
-    color: white;
+    color: var(--white);
     font-size: 4em;
     font-family: Helvetica, sans-serif;
     margin-bottom: .3em;
@@ -10,10 +84,11 @@
     text-align: left;
     text-decoration: none;
   }
+
   
 /*--The secondary header on the page.--*/
   h2  {
-    color: #596e44;
+    color: var(--darktone);
     font-size: 1.5em;
     font-family: Helvetica, sans-serif;
     margin-bottom: .3em;
@@ -25,7 +100,7 @@
 /*--Format text for one section header--*/
 
 h3  {
-    color: #8e9c88;
+    color: var(--darkMonochromeGreen);
     font-size: 2em;
     font-family: Helvetica, sans-serif;
     margin-bottom: .3em;
@@ -37,7 +112,7 @@ h3  {
 /*--Format text for one section subheader--*/
 
   h4  {
-    color: #596e44;
+    color: var(--darktone);
     font-size: 1em;
     font-family: Helvetica, sans-serif;
     margin-bottom: .3em;
@@ -49,7 +124,7 @@ h3  {
 /*--Format text for general content--*/
 
 p  {
-    color: #4c5641;
+    /*color: var(--darktone);*/
     font-size: 1em;
     font-family: Helvetica, sans-serif;
     margin-bottom: .3em;
@@ -59,19 +134,55 @@ p  {
   }
 
 
+
 a {
-  color: #fcf4db;
+  color: var(--nearwhite);
 text-decoration: none;
 }
 
+
+
+table, th, td {
+  border: 0px solid white;
+  border-spacing: 0px;
+}
+
+th, td {
+  padding-left: 3px;
+  padding-right: 4px;
+}
+
+
+td{
+    height: 20px;
+    width: 50px;
+}
 /* change the color of the background */
+
+.colorSchemeContainer{
+  border: 0px solid white;
+  padding-left: 20px; 
+  padding-right: 15px;
+  height: 50px;
+}
+
+.colorPalette {
+  background-color: yellow;
+  width: 40px;
+  height: 40px;
+  border: 0px;
+  border-spacing: 0px;
+  padding: 0px;
+  margin: 0px;
+}
+
 /*
 create a background image so that text can be placed on top.
 */   
     
 .hero-image {
   background-image: url("TroySidleEastRiverBW.jpeg");
-  background-color: #cccccc;
+  background-color: var(--mediumtone);
   height: 500px;
   background-position: center;
   background-repeat: no-repeat;
@@ -90,7 +201,8 @@ create a background image so that text can be placed on top.
 
 
 body {
-background-color: lightgray;
+color: var(--darkMonochromeGreen);
+background-color: var(--lighttone);
 margin:0;
 }
 
@@ -103,14 +215,13 @@ margin:0;
 
 /*Alternate section styles*/
 
-.sectionBackground:nth-of-type(odd) {background-color: #f3f3f3;
-    min-height: 200px;
+.sectionBackground:nth-of-type(odd) {background-color: var(--nearwhite);
+    min-height: 400px;
     padding: 2px;
+}
 
-}nth-of-type(odd)
-
-.sectionBackground:nth-of-type(even) {background-color: #c8d8c2;
-    min-height: 200px;
+.sectionBackground:nth-of-type(even) {background-color: var(--lighttone);
+    min-height: 400px;
     padding: 2px;
 
 } 
@@ -124,3 +235,105 @@ margin:0;
 }
 
 
+
+.monochromeGreen{
+        background: var(--lightMonochromeGreen);
+       	color: var(--darkMonochromeGreen);   
+    }
+
+.complementaryProduce{
+        background: var(--lightComplementaryProduce);
+       	color: var(--darkComplementaryProduce);   
+    }
+
+.complementaryVista{
+        background: var(--lightComplementaryVista);
+       	color: var(--darkComplementaryVista);
+    }
+
+
+.coolColorScheme{
+        background: lightblue;
+      	color: darkblue;
+    }
+
+.warmColorScheme{
+        background: orange;
+       	color: darkred;
+    
+
+    }
+
+.greyColorScheme{
+        background: lightgrey;
+       	color: darkslategray;
+    
+
+    }
+
+.imageContainer{
+  height: auto;
+  width: 200px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  padding: 30px;
+}
+
+.imageContainer:hover .overlay {
+  opacity: 1;
+}
+.overlay {
+  position: absolute; 
+  top: 30px; 
+  background: none;
+  background: rgba(0, 0, 0, 0); /* see-through */
+  color: #f1f1f1; 
+  transition: .5s ease;
+  opacity:0;
+  color: white;
+  font-size: 20px;
+  padding: 0px;
+  text-align: center;
+}
+
+/* Attributes of the navigation bar */
+
+.active {
+  background-color: var(--darkMonochromeGreen);
+}
+
+.sideNavigation {
+  height: 100%;
+  width: 215px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: var(--darkMonochromeGreen);
+  overflow-x: hidden;
+  padding-top: 0px;
+  font-family: Helvetica, sans-serif;
+}
+
+.sideNavigation a {
+  padding: 16px 6px 6px 20px;
+  text-decoration: none;
+  font-size: 20px;
+  color: #ADDBB1;
+  display: block;
+}
+
+.sideNavigation a:hover {
+  background-color: #ADDBB1;
+  color: #4F6350;
+}
+
+.main {
+  margin-left: 215px; /* Same as the width of the sidenav */
+  padding: 0px 0px;
+}
+
+
+/*---------------------------------------------------------------*/

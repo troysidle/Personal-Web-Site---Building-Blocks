@@ -2,39 +2,92 @@
 <html>
     
 <!-- ====================================================
-Name: Building Blocks - v1.2.1
+Name: Building Blocks - v1.3
 Author: Troy Sidle
 
-This main site is now called "Under Construction", whereas individual pages used to test code are separate and named respectively.
+This version includes a navigation menu. It also has an image in "Publications" that changes from black and white to color when the user hovers over it.
 
-The site is now updated with more complext styles. The main image resizes, and the sections "Education" and "Work Experience" have been updated with colors in a uniform palette. 
-
-v1.2.1 Update: CSS coding for alternating sections.
+In the footer, there is a color scheme change under construction.
 ======================================================== -->    
-
-
     
     
 <head>
 <meta charset="UTF-8">
-<title>CSS Testing</title>
+<title>Honeydew Limeade</title>
 <link href="Stylesheet.css" rel="stylesheet">
 </head>
 
 
-<body>
+<body id="content">
 
 
+    
+<script>
+function alertFunction() {
+  alert("This feature is under construction.");
+}
+</script>
 
+    
+    
+<!-- The navigation bar -->    
+<div class="sideNavigation">
+
+<a class="active" href="#home">Home</a>
+<a class="active" href="#education">Education</a>
+<a class="active" href="#workExperience">Work Experience</a>
+<a class="active" href="#publications">Publications</a>
+<!--<a class="active" href="#portfolio">Portfolio</a>-->
+
+</div>
+    
+<div class="main">    
+    
+    
+    
+        <script>
+        // Selecting element
+        var elem = document.getElementById("content");
+        
+        // Initial variable values
+        //var start = 'none'
+        var current;
+        var selected;
+        
+        
+        // Get the values to display.
+        //document.getElementById("oldStyleClass").innerHTML = current;
+        //document.getElementById("newStyleClass").innerHTML = start;
+        
+        // Remove old color display and replace with new.
+        function changeScheme(p1, p2) {
+        //document.getElementById("oldStyleClass").innerHTML = p1;
+        //document.getElementById("newStyleClass").innerHTML = p2;
+
+        // Remove old color scheme and replace with new.    
+        elem.classList.remove(p1);  
+        elem.classList.add(p2);  
+            
+        // Reset the current scheme.
+        current = p2;
+        }     
+    </script>
+      
+    
+    
 <!-- The sections are the main content of the website. -->    
+    
+<section id="home">
 <section class="hero-image">
     <div class="hero-text">
     <h1 style="font-size:50px">Troy Sidle</h1>
     <h2>Designer</h2>    
     </div>
 </section>
+</section>
     
-<section class="sectionBackground"> 
+    
+<section id="education"> 
 <h3>Education
 </h3>
 <p>
@@ -46,7 +99,7 @@ December 2000
 </p>
 </section> 
 
-<section class="sectionBackground">
+<section id="workExperience">
 <h3>Work Experience
 </h3>
 <h4>
@@ -63,29 +116,101 @@ Developing new bar programs with an emphasis on cocktail experiences
 Creating systems and standards for existing bar and cocktail programs 
 </p>
 </section>
+    
+<section id="publications"> 
+<h3>Publications
+</h3>
+<p>
+The recipe for Honeydew Limeade is in the book Batch Cocktails by Maggie Hoffman.
+</p>
 
+<!--Insert an image-->
     
-    
-<!--
-
-
-    
-    
-<h2>Batch Cocktails</h2>    
-    
-    
-<button onclick="document.getElementById('BookCover').style='width:50px'">Smaller Image</button>
-
-    
-    
-<img id="BookCover" src="https://storage.googleapis.com/buckethalffull/CSS%20Testing/BookCoverBatchCocktails.jpeg" style="width:100px">
-
-    
-    
-<button onclick="document.getElementById('BookCover').style='width:300px'">Larger Image</button>  
-    
-
+<div class="imageContainer">
+<img src="Batch%20Cocktails%20BW.jpeg" alt="Temp Portfolio Photo" width="200" height="auto">
+    <div class="overlay"><img src=Batch%20Cocktails.jpeg width="200" height="auto"></div>
+    </div>
+    <!--
+<img src="LimePastel2.png" alt="Temp Portfolio Photo" width="500" height="auto">
+    </div>
 -->
+</section> 
 
+    
+
+
+</div>
 </body>
+<footer class="main" style="background-color: var(--nearBlackTone);">
+    
+<br>
+<p style="color: var(--nearwhite);">Change Color Scheme (under construction)</p>
+    
+
+
+
+    
+    <!--This table holds three color schemes.-->    
+<table style="width: 600px; background-color: var(--nearBlackTone); border: 10px solid var(--nearBlackTone);">
+  <tr class="colorSchemeContainer">
+    <td class="colorSchemeContainer">
+        
+        <!--This table holds five colors of type A-->
+        
+        <table style="width: 200px; height: 10px;" onclick="alertFunction()">
+    <tr>
+    <td style="background-color: var(--mediumMonochromeGreen)"></td>
+    <td style="background-color: var(--lightMonochromeGreen)"></td>
+        <td style="background-color: var(--baseColorMonochromeGreen)"></td>
+        <td style="background-color: var(--darkMonochromeGreen)"></td>
+        <td style="background-color: var(--contrastMonochromeGreen)"></td>
+    </tr>
+        </table>  
+    </td>
+    <td class="colorSchemeContainer">
+    
+        <!--This table holds five colors of type B-->
+        
+            <table style="width: 200px; height: 10px;">
+    <tr>
+    <td style="background-color: var(--mediumComplementaryProduce)"></td>
+    <td style="background-color: var(--lightComplementaryProduce)"></td>
+        <td style="background-color: var(--baseColorComplementaryProduce)"></td>
+        <td style="background-color: var(--darkComplementaryProduce)"></td>
+        <td style="background-color: var(--contrastComplementaryProduce)"></td>
+    </tr>
+        </table>  
+    </td>
+    <td class="colorSchemeContainer">
+        
+        <!--This table holds five colors of type C-->
+        
+        <table style="width: 200px; height: 10px;">
+    <tr>
+    <td style="background-color: var(--mediumComplementaryVista)"></td>
+    <td style="background-color: var(--lightComplementaryVista)"></td>
+        <td style="background-color: var(--baseColorComplementaryVista)"></td>
+        <td style="background-color: var(--darkComplementaryVista)"></td>
+        <td style="background-color: var(--contrastComplementaryVista)"></td>
+    </tr>
+        </table>  
+    </td>
+  </tr>
+</table>
+
+<br>
+    
+    <!--Provide Buttons to use the changeScheme to alter the apearance of "content"-->
+    
+<p>
+    <button type="button" onclick="changeScheme(current, 'monochromeGreen')">Monochrome Green</button>
+    <button type="button" onclick="changeScheme(current, 'complementaryProduce')">Complementary Produce</button>
+    <button type="button" onclick="changeScheme(current, 'complementaryVista')">Complementary Vista</button>
+</p>
+    
+<br>
+    
+
+</footer>
+
 </html>
