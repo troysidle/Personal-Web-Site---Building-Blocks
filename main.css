@@ -1,0 +1,113 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    background-color: white;
+  }
+
+
+h1 {
+  margin-left: 25px;
+  color: var(--darkColor)
+}
+
+p {
+  margin-left: 25px;
+}
+
+
+/*----- Color Scheme -----*/
+
+/* Monochrome Green
+    These colors are monochrome in a green hue.
+*/
+
+.monochromeGreen {
+
+--baseColor: #C1F5C6;
+
+--lightColor: #ADDBB1;
+
+--mediumColor: #93BA96;
+
+--darkColor: #283329;    
+    
+--contrastColor: #4F6350;
+}
+
+/*Complementary Produce
+    These colors are complementary to green and resemble produce colors like blackberries and mango.
+*/
+
+.complementaryProduceColors {
+--baseColor: #C1F5C6;
+
+--lightColor: #C5B8CF;
+
+--mediumColor: #786056;
+
+--darkColor: #33104A;
+
+--contrastColor: #CC511D;
+}
+
+/*Complementary Vista
+    These colors are complementary to green and resemble a vista of wheat fields and blue sky.
+*/
+
+.complementaryVistaColors {
+--baseColor: #C1F5C6;
+
+--lightColor: #F2EDB8;
+
+--mediumColor: #9FE1F5;
+
+--darkColor: #241066;
+
+--contrastColor: #FF8F1F;
+}
+
+
+  .mainCategory {
+    display: flex;
+    width: 100%;
+    height: 20%;
+    background: var(--lightColor);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--darkColor);
+  }
+  .mainCategory h1 {
+    color: var(--contrastColor);
+  }
+  .mainCategory button {
+    color: var(--contrastColor);
+    background: var(--darkColor);
+    padding: 10px 20px;
+    border: 0;
+    border-radius: 5px;
+  }
+
+
+  .distinctCategory {
+    display: flex;
+    width: 100%;
+    height: 20%;
+    background: var(--baseColor);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--contrastColor);
+
+    }
+
+  .distinctCategory h1 {
+    color: var(--contrastColor);
+    }
+
+
+
+
+
