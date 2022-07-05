@@ -5,16 +5,15 @@
 /*--This color scheme is monochromatic in green tones--*/
 
 
-
-
-
-
 :root {
-
-    /* Color Schemes */
-
-
-/* Monochrome Green
+  --white: #ffffff;
+  --nearwhite: #f3f3f3;
+  --nearBlackTone: #434343;
+  --lighttone: #c8d8c2;
+  --mediumtone: #8e9c88;
+  --darktone: #596e44;
+    
+    /* Monochrome Green
     These colors are monochrome in a green hue.
 */
 
@@ -27,8 +26,6 @@
 --darkMonochromeGreen: #283329;    
     
 --contrastMonochromeGreen: #4F6350;
-
-
 
 
 /*Complementary Produce
@@ -60,23 +57,156 @@
 --darkComplementaryVista: #241066;
 
 --contrastComplementaryVista: #FF8F1F;
-
     
     
-    
-    
-    
-  --white: #ffffff;
-  --nearwhite: #f3f3f3;
-  --nearBlackTone: #434343;
-  --lighttone: #c8d8c2;
-  --mediumtone: #8e9c88;
-  --darktone: #596e44;
 }
+
+
+/*----- Color Scheme -----*/
+
+/* Monochrome Green
+    These colors are monochrome in a green hue.
+*/
+
+.monochromeGreen {
+
+--baseColor: var(--baseColorMonochromeGreen);
+
+--lightColor: var(--lightMonochromeGreen);
+
+--mediumColor: var(--mediumMonochromeGreen);
+
+--darkColor: var(--darkMonochromeGreen);    
+    
+--contrastColor: var(--contrastMonochromeGreen);
+}
+
+/*Complementary Produce
+    These colors are complementary to green and resemble produce colors like blackberries and mango.
+*/
+
+.complementaryProduce {
+--baseColor: var(--baseColorComplementaryProduce);
+
+--lightColor: var(--lightComplementaryProduce);
+
+--mediumColor: var(--mediumComplementaryProduce);
+
+--darkColor: var(--darkComplementaryProduce);    
+    
+--contrastColor: var(--contrastComplementaryProduce);
+}
+
+/*Complementary Vista
+    These colors are complementary to green and resemble a vista of wheat fields and blue sky.
+*/
+
+.complementaryVista {
+--baseColor: var(--baseColorComplementaryVista);
+
+--lightColor: var(--lightComplementaryVista);
+
+--mediumColor: var(--mediumComplementaryVista);
+
+--darkColor: var(--darkComplementaryVista);    
+    
+--contrastColor: var(--contrastComplementaryVista);
+
+}
+
+
+.sectionBackground:nth-of-type(odd) {
+    background-color: var(--nearwhite);
+    min-height: 400px;
+    padding: 2px;
+}
+
+.sectionBackground:nth-of-type(even) {
+    background-color: var(--lighttone);
+    min-height: 400px;
+    padding: 2px;
+} 
+
+
+.headerCategory:nth-of-type(even) {
+    color: var(--darkColor);
+}
+
+.headerCategory:nth-of-type(odd) {
+    color: var(--contrastColor);
+}
+
+  .mainCategory:nth-of-type(odd) {
+    min-height: 400px;
+    padding: 40px;
+    display: flex;
+   
+    background: var(--lightColor);
+    flex-direction: column;
+    justify-content: top;
+    align-items: left;
+    color: var(--darkColor);
+  }
+
+  .mainCategory:nth-of-type(even) {
+    min-height: 200px;
+    padding: 40px;
+    display: flex;
+   
+    background: var(--nearwhite);
+    flex-direction: column;
+    justify-content: top;
+    align-items: left;
+    color: var(--contrastColor);
+  }
+
+  .mainCategory h1 {
+    color: var(--contrastColor);
+  }
+
+/*
+.mainCategory h3:nth-of-type(odd) {
+    color: darkred;
+}
+
+.mainCategory h3:nth-of-type(even) {
+    color: darkblue;
+}
+--*/
+.mainCategory h4 {
+    color: var(--darkColor);
+}
+
+  .mainCategory button {
+    color: var(--contrastColor);
+    background: var(--darkColor);
+    padding: 10px 20px;
+    border: 0;
+    border-radius: 5px;
+  }
+
+
+  .distinctCategory {
+    display: flex;
+    width: 100%;
+    height: 20%;
+    background: var(--baseColor);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--contrastColor);
+
+    }
+
+  .distinctCategory h1 {
+    color: var(--contrastColor);
+    }
+
+
 
 /*--The main header on the page.*/
   h1  {
-    color: var(--white);
+    color: var(--darkColor);
     font-size: 4em;
     font-family: Helvetica, sans-serif;
     margin-bottom: .3em;
@@ -88,7 +218,7 @@
   
 /*--The secondary header on the page.--*/
   h2  {
-    color: var(--darktone);
+    color: var(--darkColor);
     font-size: 1.5em;
     font-family: Helvetica, sans-serif;
     margin-bottom: .3em;
@@ -97,10 +227,8 @@
     text-decoration: none;
   }
 
-/*--Format text for one section header--*/
 
-h3  {
-    color: var(--darkMonochromeGreen);
+h3 {
     font-size: 2em;
     font-family: Helvetica, sans-serif;
     margin-bottom: .3em;
@@ -109,10 +237,15 @@ h3  {
     text-decoration: none;
   }
 
+
+
+
+
+
 /*--Format text for one section subheader--*/
 
-  h4  {
-    color: var(--darktone);
+h4  {
+
     font-size: 1em;
     font-family: Helvetica, sans-serif;
     margin-bottom: .3em;
@@ -124,7 +257,7 @@ h3  {
 /*--Format text for general content--*/
 
 p  {
-    /*color: var(--darktone);*/
+    color: var(--darkColor);
     font-size: 1em;
     font-family: Helvetica, sans-serif;
     margin-bottom: .3em;
@@ -140,10 +273,17 @@ a {
 text-decoration: none;
 }
 
+.icon {
+  padding: 16px 6px 6px 20px;
+  text-decoration: none;
+
+}
+
+
 
 
 table, th, td {
-  border: 0px solid white;
+  border: 0px solid blue;
   border-spacing: 0px;
 }
 
@@ -160,9 +300,16 @@ td{
 /* change the color of the background */
 
 .colorSchemeContainer{
-  border: 0px solid white;
-  padding-left: 20px; 
-  padding-right: 15px;
+  border: 10px solid var(--darkColor);
+  padding-left: 0px; 
+  padding-right: 0px;
+  height: 50px;
+}
+
+.colorSchemeContainer2{
+  border: 3px solid white;
+  padding-left: 0px; 
+  padding-right: 0px;
   height: 50px;
 }
 
@@ -176,12 +323,20 @@ td{
   margin: 0px;
 }
 
+.underConstruction {
+  text-align: left;
+  position: absolute;
+  top: 10%;
+  left: 20%;
+  transform: translate(-50%, -50%);
+}
+
 /*
 create a background image so that text can be placed on top.
 */   
     
 .hero-image {
-  background-image: url("TroySidleEastRiverBW.jpeg");
+  background-image: url("TroySidleEastRiverColor.jpeg");
   background-color: var(--mediumtone);
   height: 500px;
   background-position: center;
@@ -195,6 +350,15 @@ create a background image so that text can be placed on top.
   position: absolute;
   top: 50%;
   left: 30%;
+  transform: translate(-50%, -50%);
+}
+
+
+.heroNavigation {
+  text-align: left;
+  position: absolute;
+  top: 10%;
+  right: 10%;
   transform: translate(-50%, -50%);
   color: white;
 }
@@ -215,16 +379,6 @@ margin:0;
 
 /*Alternate section styles*/
 
-.sectionBackground:nth-of-type(odd) {background-color: var(--nearwhite);
-    min-height: 400px;
-    padding: 2px;
-}
-
-.sectionBackground:nth-of-type(even) {background-color: var(--lighttone);
-    min-height: 400px;
-    padding: 2px;
-
-} 
 
 
 .sectionBackgroundImage 
@@ -258,10 +412,8 @@ margin:0;
     }
 
 .warmColorScheme{
-        background: orange;
+        background: white;
        	color: darkred;
-    
-
     }
 
 .greyColorScheme{
@@ -301,7 +453,8 @@ margin:0;
 /* Attributes of the navigation bar */
 
 .active {
-  background-color: var(--darkMonochromeGreen);
+  background-color: var(--darkColor);
+
 }
 
 .sideNavigation {
@@ -311,11 +464,13 @@ margin:0;
   z-index: 1;
   top: 0;
   left: 0;
-  background-color: var(--darkMonochromeGreen);
+  background-color: var(--darkColor);
   overflow-x: hidden;
-  padding-top: 0px;
+  transition: 0.5s;
+  padding-top: 60px;
   font-family: Helvetica, sans-serif;
-}
+}  
+
 
 .sideNavigation a {
   padding: 16px 6px 6px 20px;
@@ -323,17 +478,35 @@ margin:0;
   font-size: 20px;
   color: #ADDBB1;
   display: block;
+  transition: 0.3s;
 }
+
 
 .sideNavigation a:hover {
-  background-color: #ADDBB1;
-  color: #4F6350;
+  background-color: var(--baseColor);
+  color: var(--darkColor);
 }
 
+
+
 .main {
-  margin-left: 215px; /* Same as the width of the sidenav */
+  margin-left: 180px; /* Same as the width of the sidenav */
   padding: 0px 0px;
 }
+
+
+/*delete
+.test {
+  background-color: yellow;
+}
+*/
+
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
 
 
 /*---------------------------------------------------------------*/

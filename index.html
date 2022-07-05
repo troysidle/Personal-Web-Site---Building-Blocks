@@ -2,105 +2,157 @@
 <html>
     
 <!-- ====================================================
-Name: Building Blocks - v1.3
+Name: Building Blocks - v1.4
 Author: Troy Sidle
 
-This version includes a navigation menu. It also has an image in "Publications" that changes from black and white to color when the user hovers over it.
+This site is currently under construction. With more content added, the site will be finalized at its basic level.
 
-In the footer, there is a color scheme change under construction.
+The color scheme change now works, allowing a user to change the color scheme of the entire page. 
 ======================================================== -->    
     
     
 <head>
 <meta charset="UTF-8">
-<title>Honeydew Limeade</title>
+<title>HoneydewLimeade</title>
 <link href="Stylesheet.css" rel="stylesheet">
 </head>
 
 
 <body id="content">
-
-
+        
+    
+<!--first script-->
     
 <script>
-function alertFunction() {
-  alert("This feature is under construction.");
+        // function to set a given theme/color-scheme
+        function setTheme(themeName) {
+            localStorage.setItem('theme', themeName);
+            document.documentElement.className = themeName;
+        }
+
+        // Immediately invoked function to set the theme on initial load
+        (function () 
+            {
+                setTheme('monochromeGreen');
+            }
+        )();
+
+        function alertFunction() {
+        alert("This feature is under construction.");
+        }
+     
+            
+            
+        //Manage the movement of the navigation menu  
+    
+
+        //function wideNavigation() {
+        //    document.getElementById("sideNavigation").style.width = "215px";
+        //    //document.getElementById("myP").className = "";
+        //}
+
+        //function narrowNavigation() {
+        //    document.getElementById("sideNavigation").style.width = "180px";
+        //    //document.getElementById("myP").className = "test";
+        //}
+
+    
+    
+    
+
+
+
+
+window.onscroll = function() {navigationWidth()};
+
+function navigationWidth() {
+  if (document.documentElement.scrollTop > 50) {
+    //document.getElementById("myP").className = "test";
+    document.getElementById("sideNavigation").style.width = "180px";
+  } else {
+    //document.getElementById("myP").className = "";
+    document.getElementById("sideNavigation").style.width = "215px";
+  }
 }
+
+    
+    
+    
+    
+    
+    
+    
+    
+        
+    
 </script>
 
     
     
 <!-- The navigation bar -->    
-<div class="sideNavigation">
-
-<a class="active" href="#home">Home</a>
+<div id="sideNavigation" class="sideNavigation">
+<a class="active" href="#home">
+<img src="HoneydewLimeade%20Icon.png" alt="HoneydewLimeade logo" class="icon" width="50" height="auto">
+</a>
 <a class="active" href="#education">Education</a>
-<a class="active" href="#workExperience">Work Experience</a>
+<a class="active" href="#workExperience">Experience</a>
 <a class="active" href="#publications">Publications</a>
-<!--<a class="active" href="#portfolio">Portfolio</a>-->
-
+<!--<a href="javascript:void(0)" class="closebtn" onclick="narrowNavigation()">&#10094;</a>-->
+<a class="active" href="#footer"><img src="Image%20Color%20Dial%20(1).png" alt="Color Scheme Change Icon" width="50" height="auto">
+</a>     
 </div>
+    
+
+    
+        
     
 <div class="main">    
     
+<!--second script-->
     
     
-        <script>
-        // Selecting element
-        var elem = document.getElementById("content");
-        
-        // Initial variable values
-        //var start = 'none'
-        var current;
-        var selected;
-        
-        
-        // Get the values to display.
-        //document.getElementById("oldStyleClass").innerHTML = current;
-        //document.getElementById("newStyleClass").innerHTML = start;
-        
-        // Remove old color display and replace with new.
-        function changeScheme(p1, p2) {
-        //document.getElementById("oldStyleClass").innerHTML = p1;
-        //document.getElementById("newStyleClass").innerHTML = p2;
-
-        // Remove old color scheme and replace with new.    
-        elem.classList.remove(p1);  
-        elem.classList.add(p2);  
-            
-        // Reset the current scheme.
-        current = p2;
-        }     
-    </script>
       
     
     
 <!-- The sections are the main content of the website. -->    
     
 <section id="home">
+    
+    
 <section class="hero-image">
-    <div class="hero-text">
-    <h1 style="font-size:50px">Troy Sidle</h1>
-    <h2>Designer</h2>    
+        
+    <div class="underConstruction">HoneydewLimeade is under construction.
     </div>
+    
+<div class="hero-text">
+                
+    <h1 style="font-size:50px">Troy Sidle</h1>
+    <h2>Developer</h2>    
+    </div>
+    
+    
+    
+    <!-- Apply when no Navigation Menu is present>
+    <div class="heroNavigation">
+    <!--&#9776 is the character for three horizontal lines indicating a menu   
+    <span style="font-size:30px;cursor:pointer" onclick="wideNavigation()">&#9776;</span>
+    </div>
+    -->
 </section>
 </section>
     
     
-<section id="education"> 
-<h3>Education
+<section id="education" class="mainCategory"> 
+<h3 class="headerCategory">Education
 </h3>
 <p>
 Bachelor of Arts, Computer Science						
 Harding University, Searcy, AR 
 </p>
-<p>
-December 2000
-</p>
 </section> 
 
-<section id="workExperience">
-<h3>Work Experience
+<section id="workExperience" class="mainCategory">
+<h3>Experience
 </h3>
 <h4>
 The Dinex Group, New York, NY
@@ -110,14 +162,102 @@ The Dinex Group, New York, NY
 <p>Director of Cocktails
 </p> 
 <p>
-Developing new bar programs with an emphasis on cocktail experiences
+Developed bar programs with an emphasis on cocktail experiences
 </p>
 <p>
-Creating systems and standards for existing bar and cocktail programs 
+Created systems and standards for existing bar and cocktail programs 
 </p>
+    
+<br>
+    
+<h4>Restaurant Daniel, New York, NY</h4>
+<p>5/2021–12/2021</p>
+<p>Bartender</p>
+<p>
+Created cocktail recipes for house cocktail menu
+</p>
+<p>
+Executed classic and custom cocktails in a fine dining setting
+</p>
+<p>Oversaw and executed operations during a six week renovation
+</p>
+    
+<br>
+    
+    
+<h4>La Mercerie, New York, NY</h4>							
+<p>10/2020 – 5/2021</p>
+<p>
+Bartender / Server 
+</p>
+<p>Developed cocktail recipes for house drinks menu</p> 
+<p>Operated as bartender and server</p> 
+
+<br>
+    
+<h4>Skin Contact, New York, NY</h4>							
+<p>9/2020 – 12/2020</p>
+<p>
+Bartender / Server 
+</p>
+<p>
+Maintained knowledge of natural wine list that changed weekly 
+</p>
+<p>
+Operated as bartender, server and food runner
+</p> 
+
+<br>
+    
+<h4>Convive Wine & Spirits, New York, NY
+</h4>
+<p>4/2020 – 8/2020</p>
+<p>
+Service Coordinator 
+</p>
+<p>Oversaw the retail shop maintaining positive customer relations
+</p>
+<p>Created systems to maintain and improve logistics and delivery standards
+</p>
+
+<br>
+    
+<h4>ZZ’s Clam Bar, New York, NY
+</h4>
+<p>9/2017 – 3/2020</p>
+<p>
+Head Bartender 
+</p>
+<p>Created original cocktails in line with the mid-century Cuban theme
+</p>
+<p>
+Led other bartenders in the creative direction of the cocktail program
+</p>
+<p>
+Hosted multiple events per week for Carbone 
+</p>
+
+<br>
+    
+<h4>
+Pouring Ribbons, New York, NY 
+</h4>
+<p>
+9/2012 – 7/2014
+</p>
+<p>
+Owner, Manager, Bartender, Server 
+</p>
+<p>
+Trained staff for bartending, serving, hosting, and management 
+</p>
+<p>
+Became a recognized expert on Chartreuse 
+</p>    
+    
 </section>
     
-<section id="publications"> 
+<section id="publications" class="mainCategory"> 
 <h3>Publications
 </h3>
 <p>
@@ -141,23 +281,23 @@ The recipe for Honeydew Limeade is in the book Batch Cocktails by Maggie Hoffman
 
 </div>
 </body>
-<footer class="main" style="background-color: var(--nearBlackTone);">
+<footer id="footer" class="main" style="background-color: var(--darkColor);">
     
 <br>
-<p style="color: var(--nearwhite);">Change Color Scheme (under construction)</p>
+    <p style="color: var(--nearwhite);"><img src="Image%20Color%20Dial%20(1).png"> Change Color Scheme</p>
     
 
 
 
     
     <!--This table holds three color schemes.-->    
-<table style="width: 600px; background-color: var(--nearBlackTone); border: 10px solid var(--nearBlackTone);">
-  <tr class="colorSchemeContainer">
+<table style="width: 600px; border: 10px solid lightblue);">
+  <tr class="colorSchemeContainer2">
     <td class="colorSchemeContainer">
         
         <!--This table holds five colors of type A-->
         
-        <table style="width: 200px; height: 10px;" onclick="alertFunction()">
+        <table class="colorSchemeContainer2" style="width: 200px; height: 10px;" onclick="setTheme('monochromeGreen')">
     <tr>
     <td style="background-color: var(--mediumMonochromeGreen)"></td>
     <td style="background-color: var(--lightMonochromeGreen)"></td>
@@ -166,12 +306,12 @@ The recipe for Honeydew Limeade is in the book Batch Cocktails by Maggie Hoffman
         <td style="background-color: var(--contrastMonochromeGreen)"></td>
     </tr>
         </table>  
-    </td>
+    </td> 
     <td class="colorSchemeContainer">
     
         <!--This table holds five colors of type B-->
         
-            <table style="width: 200px; height: 10px;">
+        <table class="colorSchemeContainer2" style="width: 200px; height: 10px;" onclick="setTheme('complementaryProduce')">
     <tr>
     <td style="background-color: var(--mediumComplementaryProduce)"></td>
     <td style="background-color: var(--lightComplementaryProduce)"></td>
@@ -185,7 +325,8 @@ The recipe for Honeydew Limeade is in the book Batch Cocktails by Maggie Hoffman
         
         <!--This table holds five colors of type C-->
         
-        <table style="width: 200px; height: 10px;">
+        <table class="colorSchemeContainer2" style="width: 200px; height: 10px;" onclick="setTheme('complementaryVista')">
+
     <tr>
     <td style="background-color: var(--mediumComplementaryVista)"></td>
     <td style="background-color: var(--lightComplementaryVista)"></td>
@@ -201,13 +342,7 @@ The recipe for Honeydew Limeade is in the book Batch Cocktails by Maggie Hoffman
 <br>
     
     <!--Provide Buttons to use the changeScheme to alter the apearance of "content"-->
-    
-<p>
-    <button type="button" onclick="changeScheme(current, 'monochromeGreen')">Monochrome Green</button>
-    <button type="button" onclick="changeScheme(current, 'complementaryProduce')">Complementary Produce</button>
-    <button type="button" onclick="changeScheme(current, 'complementaryVista')">Complementary Vista</button>
-</p>
-    
+        
 <br>
     
 
