@@ -21,69 +21,12 @@ The color scheme change now works, allowing a user to change the color scheme of
 <body id="content">
         
     
-<!--first script-->
+<script src="main.js"></script>
+    
+
     
 <script>
-        // function to set a given theme/color-scheme
-        function setTheme(themeName) {
-            localStorage.setItem('theme', themeName);
-            document.documentElement.className = themeName;
-        }
 
-        // Immediately invoked function to set the theme on initial load
-        (function () 
-            {
-                setTheme('monochromeGreen');
-            }
-        )();
-
-        function alertFunction() {
-        alert("This feature is under construction.");
-        }
-     
-            
-            
-        //Manage the movement of the navigation menu  
-    
-
-        //function wideNavigation() {
-        //    document.getElementById("sideNavigation").style.width = "215px";
-        //    //document.getElementById("myP").className = "";
-        //}
-
-        //function narrowNavigation() {
-        //    document.getElementById("sideNavigation").style.width = "180px";
-        //    //document.getElementById("myP").className = "test";
-        //}
-
-    
-    
-    
-
-
-
-
-window.onscroll = function() {navigationWidth()};
-
-function navigationWidth() {
-  if (document.documentElement.scrollTop > 50) {
-    //document.getElementById("myP").className = "test";
-    document.getElementById("sideNavigation").style.width = "180px";
-  } else {
-    //document.getElementById("myP").className = "";
-    document.getElementById("sideNavigation").style.width = "215px";
-  }
-}
-
-    
-    
-    
-    
-    
-    
-    
-    
-        
     
 </script>
 
@@ -108,13 +51,7 @@ function navigationWidth() {
     
 <div class="main">    
     
-<!--second script-->
-    
-    
-      
-    
-    
-<!-- The sections are the main content of the website. -->    
+   
     
 <section id="home">
     
