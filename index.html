@@ -2,12 +2,14 @@
 <html>
     
 <!-- ====================================================
-Name: Building Blocks - v1.4
+Name: Building Blocks - v1.4.1
 Author: Troy Sidle
 
 This site is currently under construction. With more content added, the site will be finalized at its basic level.
 
 The color scheme change now works, allowing a user to change the color scheme of the entire page. 
+
+Tooltips are now added to Color Scheme Changes and other minor changes.
 ======================================================== -->    
     
     
@@ -25,24 +27,45 @@ The color scheme change now works, allowing a user to change the color scheme of
     
 
     
-<script>
-
-    
-</script>
-
-    
     
 <!-- The navigation bar -->    
 <div id="sideNavigation" class="sideNavigation">
-<a class="active" href="#home">
+
+<div style="text-align: center">
+<a href="#home" style="color: var(--baseColor)">
 <img src="HoneydewLimeade%20Icon.png" alt="HoneydewLimeade logo" class="icon" width="50" height="auto">
+HoneydewLimeade</a>
+</div>
+    
+    
+    
+    
+<div id="navigationLinks" class="navigation">
+<br>
+<br>
+<br>
+<a href="#education">Education</a>
+<a href="#workExperience">Experience</a>
+<a href="#publications">Publications</a>
+</div>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+    
+<a href="#footer">
+<div class="tooltip" style="text-align: center"><img src="Image%20Color%20Dial%20(1).png" alt="Color Scheme Change Icon" width="50" height="auto">
+  <span class="tooltiptext">Color Scheme Change</span>
+</div>    
+    
+
+    
 </a>
-<a class="active" href="#education">Education</a>
-<a class="active" href="#workExperience">Experience</a>
-<a class="active" href="#publications">Publications</a>
-<!--<a href="javascript:void(0)" class="closebtn" onclick="narrowNavigation()">&#10094;</a>-->
-<a class="active" href="#footer"><img src="Image%20Color%20Dial%20(1).png" alt="Color Scheme Change Icon" width="50" height="auto">
-</a>     
+    
 </div>
     
 
@@ -221,10 +244,11 @@ The recipe for Honeydew Limeade is in the book Batch Cocktails by Maggie Hoffman
 <footer id="footer" class="main" style="background-color: var(--darkColor);">
     
 <br>
-    <p style="color: var(--nearwhite);"><img src="Image%20Color%20Dial%20(1).png"> Change Color Scheme</p>
-    
 
-
+<div>
+  <img style="vertical-align:middle" src="Image%20Color%20Dial%20(1).png">
+  <span style="color: var(--baseColor)">Change Color Scheme</span>
+</div>
 
     
     <!--This table holds three color schemes.-->    
@@ -233,7 +257,8 @@ The recipe for Honeydew Limeade is in the book Batch Cocktails by Maggie Hoffman
     <td class="colorSchemeContainer">
         
         <!--This table holds five colors of type A-->
-        
+        <div class="tooltip"> 
+             
         <table class="colorSchemeContainer2" style="width: 200px; height: 10px;" onclick="setTheme('monochromeGreen')">
     <tr>
     <td style="background-color: var(--mediumMonochromeGreen)"></td>
@@ -242,11 +267,19 @@ The recipe for Honeydew Limeade is in the book Batch Cocktails by Maggie Hoffman
         <td style="background-color: var(--darkMonochromeGreen)"></td>
         <td style="background-color: var(--contrastMonochromeGreen)"></td>
     </tr>
-        </table>  
+        </table>
+         <span class="tooltiptext">Monochrome Green</span>
+            </div>
+
     </td> 
     <td class="colorSchemeContainer">
     
         <!--This table holds five colors of type B-->
+        
+        
+        <div class="tooltip"> 
+
+        
         
         <table class="colorSchemeContainer2" style="width: 200px; height: 10px;" onclick="setTheme('complementaryProduce')">
     <tr>
@@ -256,11 +289,17 @@ The recipe for Honeydew Limeade is in the book Batch Cocktails by Maggie Hoffman
         <td style="background-color: var(--darkComplementaryProduce)"></td>
         <td style="background-color: var(--contrastComplementaryProduce)"></td>
     </tr>
-        </table>  
+        </table>
+              <span class="tooltiptext">Purples and Oranges</span>
+            </div>
     </td>
     <td class="colorSchemeContainer">
+
+
         
         <!--This table holds five colors of type C-->
+        
+        <div class="tooltip"> 
         
         <table class="colorSchemeContainer2" style="width: 200px; height: 10px;" onclick="setTheme('complementaryVista')">
 
@@ -271,7 +310,9 @@ The recipe for Honeydew Limeade is in the book Batch Cocktails by Maggie Hoffman
         <td style="background-color: var(--darkComplementaryVista)"></td>
         <td style="background-color: var(--contrastComplementaryVista)"></td>
     </tr>
-        </table>  
+        </table>
+        <span class="tooltiptext">Blues and Yellows</span>
+            </div>
     </td>
   </tr>
 </table>

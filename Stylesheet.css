@@ -202,6 +202,9 @@
     color: var(--contrastColor);
     }
 
+span {
+    font-family: Helvetica, sans-serif;
+}
 
 
 /*--The main header on the page.*/
@@ -452,11 +455,6 @@ margin:0;
 
 /* Attributes of the navigation bar */
 
-.active {
-  background-color: var(--darkColor);
-
-}
-
 .sideNavigation {
   height: 100%;
   width: 215px;
@@ -467,26 +465,54 @@ margin:0;
   background-color: var(--darkColor);
   overflow-x: hidden;
   transition: 0.5s;
-  padding-top: 60px;
+  padding-top: 30px;
   font-family: Helvetica, sans-serif;
 }  
 
 
-.sideNavigation a {
+.navigation a {
   padding: 16px 6px 6px 20px;
   text-decoration: none;
   font-size: 20px;
-  color: #ADDBB1;
+  color: var(--baseColor);
   display: block;
   transition: 0.3s;
 }
 
 
-.sideNavigation a:hover {
+.navigation a:hover {
   background-color: var(--baseColor);
   color: var(--darkColor);
 }
 
+/*tool tip to describe an object*/
+
+.tooltip {
+  position: relative;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 130px;
+  background-color: var(--baseColor);
+  color: var(--darkColor);
+  text-align: center;
+  border-radius: 16px;
+  padding: 7px 0;
+  font-size: 12px;
+    
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+  bottom: 110%;
+  left: 50%;
+  margin-left: -65px;
+
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
 
 
 .main {
