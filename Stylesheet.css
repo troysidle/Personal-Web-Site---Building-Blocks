@@ -528,6 +528,21 @@ margin:0;
 */
 
 
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+
+}
+
+.flex-container > div {
+  width: 200px;
+  margin: 12px;
+  text-align: left;
+  line-height: 20px;
+  font-size: 14px;
+}
+
+
 @media screen and (max-height: 450px) {
   .sidenav {padding-top: 15px;}
   .sidenav a {font-size: 18px;}
