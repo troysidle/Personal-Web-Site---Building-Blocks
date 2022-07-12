@@ -1,408 +1,71 @@
-<!DOCTYPE HTML>
-<html>
-    
+<!DOCTYPE html>
+<html lang="en-us">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="UTF-8">
+    <link rel="stylesheet" href="main.css">
+<title>Slideshow</title>
+
 <!-- ====================================================
-Name: Building Blocks - v1.4.2
+Name: Simple CSS
 Author: Troy Sidle
 
-This site is currently under construction. With more content added, the site will be finalized at its basic level.
+This is a five photo slideshow. The bulk of which is taken from w3schools.com.
 
-The color scheme change now works, allowing a user to change the color scheme of the entire page. 
-
-Tooltips and a flexbox are now added to Color Scheme Changes and other minor changes.
-======================================================== -->    
-    
-    
-<head>
-<meta charset="UTF-8">
-<title>HoneydewLimeade</title>
-<link href="Stylesheet.css" rel="stylesheet">
-</head>
-
-
-<body id="content">
-        
-    
-<script src="main.js"></script>
+The main adjustment is getting irregularly sized photos to be vertically centered.
+======================================================== -->        
     
 
-    
-    
-<!-- The navigation bar -->    
-<div id="sideNavigation" class="sideNavigation">
+<body>
 
-<div style="text-align: center">
-<a href="#home" style="color: var(--baseColor)">
-<img src="HoneydewLimeade%20Icon.png" alt="HoneydewLimeade logo" class="icon" width="50" height="auto">
-HoneydewLimeade</a>
-</div>
-    
-    
-    
-    
-<div id="navigationLinks" class="navigation">
-<br>
-<br>
-<br>
-<a href="#education">Education</a>
-<a href="#workExperience">Experience</a>
-<a href="#publications">Publications</a>
+<div class="slideshow-container">
+
+<div class="mySlides fade verticalCentered">
+  <div class="numbertext">1 / 5</div>
+  <img src="SlideshowImages/BlurryHudsonBackground.jpg" style="width:100%">
+  <div class="text">Caption Text</div>
 </div>
 
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-    
-<a href="#footer">
-<div class="tooltip" style="text-align: center"><img src="Image%20Color%20Dial%20(1).png" alt="Color Scheme Change Icon" width="50" height="auto">
-  <span class="tooltiptext">Color Scheme Change</span>
-</div>    
-    
+<div class="mySlides fade verticalCentered">
+  <div class="numbertext">2 / 5</div>
+  <img src="SlideshowImages/ParkBackground.jpg" style="width:100%">
+  <div class="text">Caption Two</div>
+</div>
 
-    
-</a>
-    
+<div class="mySlides fade verticalCentered">
+  <div class="numbertext">3 / 5</div>
+  <img src="SlideshowImages/TroySidleEastRiverColor.jpeg" style="width:100%">
+  <div class="text">Caption Three</div>
 </div>
     
+<div class="mySlides fade verticalCentered">
+  <div class="numbertext">4 / 5</div>
+  <img src="SlideshowImages/VibrantHudsonBackground.jpg" style="width:100%">
+  <div class="text">Caption Four</div>
+</div>
+    
+<div class="mySlides fade verticalCentered">
+  <div class="numbertext">5 / 5</div>
+  <img src="SlideshowImages/SunestHudsonBackground.jpg" style="width:100%">
+  <div class="text">Caption Five</div>
+</div>
 
-    
-        
-    
-<div class="main">    
-    
-   
-    
-<section id="home">
-    
-    
-<section class="hero-image">
-        
-    <div class="underConstruction">HoneydewLimeade is under construction.
-    </div>
-    
-<div class="hero-text">
-                
-    <h1 style="font-size:50px">Troy Sidle</h1>
-    <h2>Developer</h2>    
-    </div>
-    
-    
-    
-    <!-- Apply when no Navigation Menu is present>
-    <div class="heroNavigation">
-    <!--&#9776 is the character for three horizontal lines indicating a menu   
-    <span style="font-size:30px;cursor:pointer" onclick="wideNavigation()">&#9776;</span>
-    </div>
-    -->
-</section>
-</section>
-    
-    
-<section id="education" class="mainCategory"> 
-<h3 class="headerCategory">Education
-</h3>
-<p>
-Bachelor of Arts, Computer Science						
-Harding University, Searcy, AR 
-</p>
-</section> 
+<a class="prev" onclick="plusSlides(-1)">❮</a>
+<a class="next" onclick="plusSlides(1)">❯</a>
 
-<section id="workExperience" class="mainCategory">
-<h3>Experience
-</h3>
-<h4>
-The Dinex Group, New York, NY
-</h4>
-<p>2/2022 – 5/2022
-</p>
-<p>Director of Cocktails
-</p> 
-<p>
-Developed bar programs with an emphasis on cocktail experiences
-</p>
-<p>
-Created systems and standards for existing bar and cocktail programs 
-</p>
-    
+</div>
 <br>
-    
-<h4>Restaurant Daniel, New York, NY</h4>
-<p>5/2021–12/2021</p>
-<p>Bartender</p>
-<p>
-Created cocktail recipes for house cocktail menu
-</p>
-<p>
-Executed classic and custom cocktails in a fine dining setting
-</p>
-<p>Oversaw and executed operations during a six week renovation
-</p>
-    
-<br>
-    
-    
-<h4>La Mercerie, New York, NY</h4>							
-<p>10/2020 – 5/2021</p>
-<p>
-Bartender / Server 
-</p>
-<p>Developed cocktail recipes for house drinks menu</p> 
-<p>Operated as bartender and server</p> 
 
-<br>
-    
-<h4>Skin Contact, New York, NY</h4>							
-<p>9/2020 – 12/2020</p>
-<p>
-Bartender / Server 
-</p>
-<p>
-Maintained knowledge of natural wine list that changed weekly 
-</p>
-<p>
-Operated as bartender, server and food runner
-</p> 
-
-<br>
-    
-<h4>Convive Wine & Spirits, New York, NY
-</h4>
-<p>4/2020 – 8/2020</p>
-<p>
-Service Coordinator 
-</p>
-<p>Oversaw the retail shop maintaining positive customer relations
-</p>
-<p>Created systems to maintain and improve logistics and delivery standards
-</p>
-
-<br>
-    
-<h4>ZZ’s Clam Bar, New York, NY
-</h4>
-<p>9/2017 – 3/2020</p>
-<p>
-Head Bartender 
-</p>
-<p>Created original cocktails in line with the mid-century Cuban theme
-</p>
-<p>
-Led other bartenders in the creative direction of the cocktail program
-</p>
-<p>
-Hosted multiple events per week for Carbone 
-</p>
-
-<br>
-    
-<h4>
-Pouring Ribbons, New York, NY 
-</h4>
-<p>
-9/2012 – 7/2014
-</p>
-<p>
-Owner, Manager, Bartender, Server 
-</p>
-<p>
-Trained staff for bartending, serving, hosting, and management 
-</p>
-<p>
-Became a recognized expert on Chartreuse 
-</p>    
-    
-</section>
-    
-<!--Publications-->
-    
-<section id="publications" class="mainCategory"> 
-<h3>Publications
-</h3>
-    <p>Having worked professionally in the cocktail industry, from time to time I have been asked to contribute recipes for books on a particular theme.
-    </p>
-
-
-
-
-<!--Book Images-->
-    
-    
-
-
-<div class="flex-container">
-    
-    <div class="imageContainer">
-
-        <img src="/Book%20Covers/Batch%20CocktailsBW.jpeg" alt="Temp Portfolio Photo" width="150" height="auto">
-        <div class="overlay"><img src="Book%20Covers/Batch%20Cocktails.jpeg" width="150" height="auto">
-        </div>
-        <br>
-        Recipes for drinks made in larger quantities
-        <br>
-        <br>
-	    Honeydew Limeade - Honeydew, Lime, Green Tea, White Peppercorn
-
-    </div>
-
-    <div class="imageContainer">
-        <img src="/Book%20Covers/Cocktails%20With%20A%20TwistBW.jpg" alt="Temp Portfolio Photo" width="150" height="auto">
-        <div class="overlay"><img src="/Book%20Covers/Cocktails%20With%20A%20Twist.jpeg" width="150" height="auto">
-        </div>
-        <br>
-        Classic cocktails and variations on them
-        <br>
-        <br>
-	    Part & Parcel - Vodka, Lime, Grapefruit, St-Germain, Lavender Bitters
-    </div>
-  
-
-    <div class="imageContainer">
-        
-        <img src="/Book%20Covers/Way%20We%20AteBW.jpg" alt="Temp Portfolio Photo" width="150" height="auto">
-        <div class="overlay"><img src="/Book%20Covers/Way%20We%20Ate.jpeg" width="150" height="auto">
-        </div>
-        <br>
-        Food and drink recipes each representing a year over the previous century
-        <br>
-        <br>
-        Electric Gin - Beefeater Gin, Lime, Chartreuse and Tang Powder
-    </div>
-    
-    <div class="imageContainer">
-        <img src="/Book%20Covers/Bartender's%20ManifestoBW.jpg" alt="Temp Portfolio Photo" width="150" height="auto">
-        <div class="overlay"><img src="Book%20Covers/Bartender's%20Manifesto.jpeg" width="150" height="auto">
-        </div>
-        <br>
-        How to create original cocktails by Toby Maloney of The Violet Hour
-        <br>
-        <br>
-        The Etiquette - Pisco, Lime, Raspberry, Aperol, Sparkling Wine
-    </div>
-    
-    <div class="imageContainer">
-        <img src="/Book%20Covers/Rogue%20CocktailsBW.jpg" alt="Temp Portfolio Photo" width="150" height="auto">
-        <div class="overlay"><img src="/Book%20Covers/Rogue%20Cocktails.jpg" width="150" height="auto">
-        </div>
-        <br>
-        Unusual cocktails with common ingredients
-        <br>
-        <br>
-        Clocka - Grappa, Honey, Orange Bitters, Mint, Rose Water
-    </div>
-    
-    <div class="imageContainer">
-        <img src="/Book%20Covers/Beta%20CocktailsBW.jpg" alt="Temp Portfolio Photo" width="150" height="auto">
-        <div class="overlay"><img src="/Book%20Covers/Beta%20Cocktails.jpg" width="150" height="auto">
-        </div>
-        <br>
-        An update of Rogue Cocktails.
-        <br>
-        <br>
-        Heart of Glass - Eagle Rare Bourbon, Carpano Antica, Cynar, Angostura Bitters, Orange Peel
-    </div>
-
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span>
+  <span class="dot" onclick="currentSlide(4)"></span>
+  <span class="dot" onclick="currentSlide(5)"></span>
 </div>
 
     
-    
-    <!--
-<img src="LimePastel2.png" alt="Temp Portfolio Photo" width="500" height="auto">
-    </div>
--->
-</section> 
+<script src="main.js">
+</script>
 
-    
-
-
-</div>
 </body>
-<footer id="footer" class="main" style="background-color: var(--darkColor);">
-    
-<br>
-
-<div>
-  <img style="vertical-align:middle" src="Image%20Color%20Dial%20(1).png">
-  <span style="color: var(--baseColor)">Change Color Scheme</span>
-</div>
-
-    
-    <!--This table holds three color schemes.-->    
-<table style="width: 600px; border: 10px solid lightblue);">
-  <tr class="colorSchemeContainer2">
-    <td class="colorSchemeContainer">
-        
-        <!--This table holds five colors of type A-->
-        <div class="tooltip"> 
-             
-        <table class="colorSchemeContainer2" style="width: 200px; height: 10px;" onclick="setTheme('monochromeGreen')">
-    <tr>
-    <td style="background-color: var(--mediumMonochromeGreen)"></td>
-    <td style="background-color: var(--lightMonochromeGreen)"></td>
-        <td style="background-color: var(--baseColorMonochromeGreen)"></td>
-        <td style="background-color: var(--darkMonochromeGreen)"></td>
-        <td style="background-color: var(--contrastMonochromeGreen)"></td>
-    </tr>
-        </table>
-         <span class="tooltiptext">Monochrome Green</span>
-            </div>
-
-    </td> 
-    <td class="colorSchemeContainer">
-    
-        <!--This table holds five colors of type B-->
-        
-        
-        <div class="tooltip"> 
-
-        
-        
-        <table class="colorSchemeContainer2" style="width: 200px; height: 10px;" onclick="setTheme('complementaryProduce')">
-    <tr>
-    <td style="background-color: var(--mediumComplementaryProduce)"></td>
-    <td style="background-color: var(--lightComplementaryProduce)"></td>
-        <td style="background-color: var(--baseColorComplementaryProduce)"></td>
-        <td style="background-color: var(--darkComplementaryProduce)"></td>
-        <td style="background-color: var(--contrastComplementaryProduce)"></td>
-    </tr>
-        </table>
-              <span class="tooltiptext">Purples and Oranges</span>
-            </div>
-    </td>
-    <td class="colorSchemeContainer">
-
-
-        
-        <!--This table holds five colors of type C-->
-        
-        <div class="tooltip"> 
-        
-        <table class="colorSchemeContainer2" style="width: 200px; height: 10px;" onclick="setTheme('complementaryVista')">
-
-    <tr>
-    <td style="background-color: var(--mediumComplementaryVista)"></td>
-    <td style="background-color: var(--lightComplementaryVista)"></td>
-        <td style="background-color: var(--baseColorComplementaryVista)"></td>
-        <td style="background-color: var(--darkComplementaryVista)"></td>
-        <td style="background-color: var(--contrastComplementaryVista)"></td>
-    </tr>
-        </table>
-        <span class="tooltiptext">Blues and Yellows</span>
-            </div>
-    </td>
-  </tr>
-</table>
-
-<br>
-    
-    <!--Provide Buttons to use the changeScheme to alter the apearance of "content"-->
-        
-<br>
-    
-
-</footer>
-
 </html>
