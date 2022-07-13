@@ -122,7 +122,7 @@
 }
 
 .sectionBackground:nth-of-type(even) {
-    background-color: var(--lighttone);
+    background-color: var(--baseColor);
     min-height: 400px;
     padding: 2px;
 } 
@@ -141,7 +141,7 @@
     padding: 40px;
     display: flex;
    
-    background: var(--lightColor);
+    background: var(--baseColor);
     flex-direction: column;
     justify-content: top;
     align-items: left;
@@ -369,7 +369,7 @@ create a background image so that text can be placed on top.
 
 body {
 color: var(--darkMonochromeGreen);
-background-color: var(--lighttone);
+background-color: var(--lightColor);
 margin:0;
 }
 
@@ -518,6 +518,11 @@ margin:0;
 .main {
   margin-left: 180px; /* Same as the width of the sidenav */
   padding: 0px 0px;
+}
+
+.footer {
+  margin-left: 180px; /* Same as the width of the sidenav */
+  padding: 0px 30px;
 }
 
 

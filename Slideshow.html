@@ -1,0 +1,287 @@
+<!DOCTYPE HTML>
+<html>
+    
+<!-- ====================================================
+Name: Building Blocks - v1.4.2
+Author: Troy Sidle
+
+This site is currently under construction. With more content added, the site will be finalized at its basic level.
+
+The color scheme change now works, allowing a user to change the color scheme of the entire page. 
+
+Tooltips and a flexbox are now added to Color Scheme Changes and other minor changes.
+======================================================== -->    
+    
+    
+<head>
+<meta charset="UTF-8">
+<title>HoneydewLimeade Slideshow</title>
+<link href="Stylesheet.css" rel="stylesheet">
+    <link href="slideshow.css" rel="stylesheet">
+</head>
+
+
+<body id="content">
+        
+    
+<div class="main">        
+    
+<div class="slideshow-container">
+
+<div class="mySlides fade verticalCentered">
+  <div class="numbertext">1 / 14</div>
+  <img src="SlideshowImages/BlurryHudsonBackground.jpg" style="width:100%">
+  <div class="text">Hudson River</div>
+</div>
+
+<div class="mySlides fade verticalCentered">
+  <div class="numbertext">2 / 14</div>
+  <img src="SlideshowImages/ParkBackground.jpg" style="width:100%">
+  <div class="text">Hudson River Park</div>
+</div>
+
+<div class="mySlides fade verticalCentered">
+  <div class="numbertext">3 / 14</div>
+  <img src="SlideshowImages/TroySidleEastRiverColor.jpeg" style="width:100%">
+  <div class="text">East River Park</div>
+</div>
+    
+<div class="mySlides fade verticalCentered">
+  <div class="numbertext">4 / 14</div>
+  <img src="SlideshowImages/VibrantHudsonBackground.jpg" style="width:100%">
+  <div class="text">Hudson River Vibrant</div>
+</div>
+    
+<div class="mySlides fade verticalCentered">
+  <div class="numbertext">5 / 14</div>
+  <img src="SlideshowImages/SunestHudsonBackground.jpg" style="width:100%">
+  <div class="text">Hudson Sunset</div>
+</div>
+
+<div class="mySlides fade verticalCentered">
+  <div class="numbertext">6 / 14</div>
+  <img src="SlideshowImages/IMG_9437.jpeg" style="width:100%">
+  <div class="text">East River Unedited</div>
+</div>
+    
+<div class="mySlides fade verticalCentered">
+  <div class="numbertext">7 / 14</div>
+  <img src="SlideshowImages/IMG_8815.jpeg" style="width:100%">
+  <div class="text">Little Island No Glasses</div>
+</div>
+
+<div class="mySlides fade verticalCentered">
+  <div class="numbertext">8 / 14</div>
+  <img src="SlideshowImages/IMG_8836.jpeg" style="width:80%">
+  <div class="text">Hudson Park Glasses</div>
+</div>
+
+<div class="mySlides fade verticalCentered">
+  <div class="numbertext">9 / 14</div>
+  <img src="SlideshowImages/IMG_9038.jpeg" style="width:100%">
+  <div class="text">Hudson River Angle One</div>
+</div>
+
+<div class="mySlides fade verticalCentered">
+  <div class="numbertext">10 / 14</div>
+  <img src="SlideshowImages/IMG_9114.jpeg" style="width:100%">
+  <div class="text">Hudon River Angle Two</div>
+</div>
+    
+<div class="mySlides fade verticalCentered">
+  <div class="numbertext">11 / 14</div>
+  <img src="SlideshowImages/IMG_9138.jpeg" style="width:100%">
+  <div class="text">Vibrant Up Close</div>
+</div>
+    
+<div class="mySlides fade verticalCentered">
+  <div class="numbertext">12 / 14</div>
+  <img src="SlideshowImages/IMG_9147.jpeg" style="width:100%">
+  <div class="text">Hudson Sunset Muted Colors</div>
+</div>
+
+<div class="mySlides fade verticalCentered">
+  <div class="numbertext">13 / 14</div>
+  <img src="SlideshowImages/IMG_9208.jpeg" style="width:50%">
+  <div class="text">Stoop</div>
+</div>
+    
+<div class="mySlides fade verticalCentered">
+  <div class="numbertext">14 / 14</div>
+  <img src="SlideshowImages/IMG_9346.jpeg" style="width:100%">
+  <div class="text">Full Length</div>
+</div>
+
+<a class="prev" onclick="plusSlides(-1)">❮</a>
+<a class="next" onclick="plusSlides(1)">❯</a>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span>
+  <span class="dot" onclick="currentSlide(4)"></span>
+  <span class="dot" onclick="currentSlide(5)"></span>
+  <span class="dot" onclick="currentSlide(6)"></span>
+  <span class="dot" onclick="currentSlide(7)"></span>
+  <span class="dot" onclick="currentSlide(8)"></span>
+  <span class="dot" onclick="currentSlide(9)"></span>
+  <span class="dot" onclick="currentSlide(10)"></span>
+  <span class="dot" onclick="currentSlide(11)"></span>
+  <span class="dot" onclick="currentSlide(12)"></span>
+  <span class="dot" onclick="currentSlide(13)"></span>
+  <span class="dot" onclick="currentSlide(14)"></span>
+    
+</div>
+
+    
+<script src="slideshow.js">
+</script>
+    
+
+<script src="main.js"></script>
+    
+
+    
+    
+<!-- The navigation bar -->    
+<div id="sideNavigation" class="sideNavigation">
+
+<div style="text-align: center">
+<a href="#home" style="color: var(--baseColor)">
+<img src="HoneydewLimeade%20Icon.png" alt="HoneydewLimeade logo" class="icon" width="50" height="auto">
+HoneydewLimeade</a>
+</div>
+    
+    
+    
+    
+<div id="navigationLinks" class="navigation">
+<br>
+<br>
+<br>
+<!--
+<a href="#education">Education</a>
+<a href="#workExperience">Experience</a>
+<a href="#publications">Publications</a>
+
+-->    
+</div>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+    
+<a href="#footer">
+<div class="tooltip" style="text-align: center"><img src="Image%20Color%20Dial%20(1).png" alt="Color Scheme Change Icon" width="50" height="auto">
+  <span class="tooltiptext">Color Scheme Change</span>
+</div>    
+    
+
+    
+</a>
+    
+</div>
+   
+    
+        
+    
+    
+</div>
+</body>
+    
+    
+    
+    
+<footer id="footer" class="footer" style="background-color: var(--darkColor);">
+    
+<br>
+
+<div>
+  <img style="vertical-align:middle" src="Image%20Color%20Dial%20(1).png">
+  <span style="color: var(--baseColor)">Change Color Scheme</span>
+</div>
+
+    
+    <!--This table holds three color schemes.-->    
+<table style="width: 600px; border: 10px solid lightblue);">
+  <tr class="colorSchemeContainer2">
+    <td class="colorSchemeContainer">
+        
+        <!--This table holds five colors of type A-->
+        <div class="tooltip"> 
+             
+        <table class="colorSchemeContainer2" style="width: 200px; height: 10px;" onclick="setTheme('monochromeGreen')">
+    <tr>
+    <td style="background-color: var(--mediumMonochromeGreen)"></td>
+    <td style="background-color: var(--lightMonochromeGreen)"></td>
+        <td style="background-color: var(--baseColorMonochromeGreen)"></td>
+        <td style="background-color: var(--darkMonochromeGreen)"></td>
+        <td style="background-color: var(--contrastMonochromeGreen)"></td>
+    </tr>
+        </table>
+         <span class="tooltiptext">Monochrome Green</span>
+            </div>
+
+    </td> 
+    <td class="colorSchemeContainer">
+    
+        <!--This table holds five colors of type B-->
+        
+        
+        <div class="tooltip"> 
+
+        
+        
+        <table class="colorSchemeContainer2" style="width: 200px; height: 10px;" onclick="setTheme('complementaryProduce')">
+    <tr>
+    <td style="background-color: var(--mediumComplementaryProduce)"></td>
+    <td style="background-color: var(--lightComplementaryProduce)"></td>
+        <td style="background-color: var(--baseColorComplementaryProduce)"></td>
+        <td style="background-color: var(--darkComplementaryProduce)"></td>
+        <td style="background-color: var(--contrastComplementaryProduce)"></td>
+    </tr>
+        </table>
+              <span class="tooltiptext">Purples and Oranges</span>
+            </div>
+    </td>
+    <td class="colorSchemeContainer">
+
+
+        
+        <!--This table holds five colors of type C-->
+        
+        <div class="tooltip"> 
+        
+        <table class="colorSchemeContainer2" style="width: 200px; height: 10px;" onclick="setTheme('complementaryVista')">
+
+    <tr>
+    <td style="background-color: var(--mediumComplementaryVista)"></td>
+    <td style="background-color: var(--lightComplementaryVista)"></td>
+        <td style="background-color: var(--baseColorComplementaryVista)"></td>
+        <td style="background-color: var(--darkComplementaryVista)"></td>
+        <td style="background-color: var(--contrastComplementaryVista)"></td>
+    </tr>
+        </table>
+        <span class="tooltiptext">Blues and Yellows</span>
+            </div>
+    </td>
+  </tr>
+</table>
+
+<br>
+    
+    <!--Provide Buttons to use the changeScheme to alter the apearance of "content"-->
+        
+<br>
+    
+
+</footer>
+
+</html>
