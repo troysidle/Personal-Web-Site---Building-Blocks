@@ -1,8 +1,6 @@
-<!DOCTYPE HTML>
-<html>
     
 <!-- ====================================================
-Name: Building Blocks - v1.4.2
+Name: Building Blocks - v1.4.3
 Author: Troy Sidle
 
 This site is currently under construction. With more content added, the site will be finalized at its basic level.
@@ -10,8 +8,12 @@ This site is currently under construction. With more content added, the site wil
 The color scheme change now works, allowing a user to change the color scheme of the entire page. 
 
 Tooltips and a flexbox are now added to Color Scheme Changes and other minor changes.
+
+Comments have been updated.
 ======================================================== -->    
     
+<!DOCTYPE HTML>
+<html>
     
 <head>
 <meta charset="UTF-8">
@@ -22,27 +24,32 @@ Tooltips and a flexbox are now added to Color Scheme Changes and other minor cha
 
 <body id="content">
         
-    
+<!--does this script need to be here? Or can it be in <head>?
+-->
 <script src="main.js"></script>
     
+    
+<!-- begin Navigation Menu -->    
+
+<div id="navigationBar" class="sideNavigation">
 
     
-    
-<!-- The navigation bar -->    
-<div id="sideNavigation" class="sideNavigation">
-
+<!-- Home name and logo -->
 <div style="text-align: center">
+
 <a href="#home" style="color: var(--baseColor)">
-<img src="HoneydewLimeade%20Icon.png" alt="HoneydewLimeade logo" class="icon" width="50" height="auto">
-HoneydewLimeade</a>
+
+<img src="HoneydewLimeade%20Icon.png" alt="HoneydewLimeade logo" class="icon" width="80" height="auto">
+HoneydewLimeade    
+</a>
+
 </div>
+<!-- end Home name and logo -->    
     
-    
-    
+
+<!-- Page navigation links -->
     
 <div id="navigationLinks" class="navigation">
-<br>
-<br>
 <br>
 <a href="#education">Education</a>
 <a href="#workExperience">Experience</a>
@@ -56,9 +63,11 @@ HoneydewLimeade</a>
 <br>
 <br>
 <br>
+
+<!-- Footer link to change color scheme -->    
     
 <a href="#footer">
-<div class="tooltip" style="text-align: center"><img src="Image%20Color%20Dial%20(1).png" alt="Color Scheme Change Icon" width="50" height="auto">
+<div class="tooltip"><img src="IconColorDial.png" alt="Color Scheme Change Icon" class="transparentCircle">
   <span class="tooltiptext">Color Scheme Change</span>
 </div>    
     
@@ -66,50 +75,69 @@ HoneydewLimeade</a>
     
 </a>
     
-</div>
+</div> <!-- end of Navigation Menu-->
     
 
     
-        
+<!-- main content -->    
     
 <div class="main">    
     
-   
-    
+
+<!-- home -->    
+
 <section id="home">
     
+<!-- main profile image -->
     
-<section class="hero-image">
-        
-    <div class="underConstruction">HoneydewLimeade is under construction.
+<div class="hero-image">
+    
+    <!-- under construction notice -->
+    
+    <div class="underConstruction">
+    HoneydewLimeade is under construction.
+    <br>
+    Follow along with the process on <a style="color: var(--contrastColor)" href="http://medium.com/@troysidle">Medium</a>.
     </div>
+    
+<!-- main profile text -->
     
 <div class="hero-text">
-                
-    <h1 style="font-size:50px">Troy Sidle</h1>
-    <h2>Developer</h2>    
-    </div>
     
+    <h1>Troy Sidle</h1>
+    <h2>Web Developer</h2>
     
+</div>
     
-    <!-- Apply when no Navigation Menu is present>
+
+<!-- Apply when no Navigation Menu is present>
     <div class="heroNavigation">
     <!--&#9776 is the character for three horizontal lines indicating a menu   
     <span style="font-size:30px;cursor:pointer" onclick="wideNavigation()">&#9776;</span>
     </div>
-    -->
-</section>
-</section>
+-->
+    
+</div> <!-- end main profile image -->
+    
+</section> <!-- end home -->
     
     
+<!-- Education Section -->
+
 <section id="education" class="mainCategory"> 
-<h3 class="headerCategory">Education
-</h3>
-<p>
-Bachelor of Arts, Computer Science						
-Harding University, Searcy, AR 
-</p>
-</section> 
+    <h3 class="headerCategory">Education
+    </h3>
+    <p>
+        Bachelor of Arts, Computer Science
+    </p>
+    <p>
+        Harding University, Searcy, AR 
+    </p>
+</section> <!-- end Education Section -->
+    
+    
+    
+<!-- Experience Section --> 
 
 <section id="workExperience" class="mainCategory">
 <h3>Experience
@@ -215,9 +243,10 @@ Trained staff for bartending, serving, hosting, and management
 Became a recognized expert on Chartreuse 
 </p>    
     
-</section>
+</section> <!-- end Education Section -->
     
-<!--Publications-->
+    
+<!-- Publications Section -->
     
 <section id="publications" class="mainCategory"> 
 <h3>Publications
@@ -230,14 +259,11 @@ Became a recognized expert on Chartreuse
 
 <!--Book Images-->
     
-    
-
-
 <div class="flex-container">
     
     <div class="imageContainer">
 
-        <img src="/Book%20Covers/Batch%20CocktailsBW.jpeg" alt="Temp Portfolio Photo" width="150" height="auto">
+        <img src="Book%20Covers/Batch%20CocktailsBW.jpeg" alt="Temp Portfolio Photo" width="150" height="auto">
         <div class="overlay"><img src="Book%20Covers/Batch%20Cocktails.jpeg" width="150" height="auto">
         </div>
         <br>
@@ -249,8 +275,8 @@ Became a recognized expert on Chartreuse
     </div>
 
     <div class="imageContainer">
-        <img src="/Book%20Covers/Cocktails%20With%20A%20TwistBW.jpg" alt="Temp Portfolio Photo" width="150" height="auto">
-        <div class="overlay"><img src="/Book%20Covers/Cocktails%20With%20A%20Twist.jpeg" width="150" height="auto">
+        <img src="Book%20Covers/Cocktails%20With%20A%20TwistBW.jpg" alt="Temp Portfolio Photo" width="150" height="auto">
+        <div class="overlay"><img src="Book%20Covers/Cocktails%20With%20A%20Twist.jpeg" width="150" height="auto">
         </div>
         <br>
         Classic cocktails and variations on them
@@ -262,8 +288,8 @@ Became a recognized expert on Chartreuse
 
     <div class="imageContainer">
         
-        <img src="/Book%20Covers/Way%20We%20AteBW.jpg" alt="Temp Portfolio Photo" width="150" height="auto">
-        <div class="overlay"><img src="/Book%20Covers/Way%20We%20Ate.jpeg" width="150" height="auto">
+        <img src="Book%20Covers/Way%20We%20AteBW.jpg" alt="Temp Portfolio Photo" width="150" height="auto">
+        <div class="overlay"><img src="Book%20Covers/Way%20We%20Ate.jpeg" width="150" height="auto">
         </div>
         <br>
         Food and drink recipes each representing a year over the previous century
@@ -273,7 +299,7 @@ Became a recognized expert on Chartreuse
     </div>
     
     <div class="imageContainer">
-        <img src="/Book%20Covers/Bartender's%20ManifestoBW.jpg" alt="Temp Portfolio Photo" width="150" height="auto">
+        <img src="Book%20Covers/Bartender's%20ManifestoBW.jpg" alt="Temp Portfolio Photo" width="150" height="auto">
         <div class="overlay"><img src="Book%20Covers/Bartender's%20Manifesto.jpeg" width="150" height="auto">
         </div>
         <br>
@@ -284,8 +310,8 @@ Became a recognized expert on Chartreuse
     </div>
     
     <div class="imageContainer">
-        <img src="/Book%20Covers/Rogue%20CocktailsBW.jpg" alt="Temp Portfolio Photo" width="150" height="auto">
-        <div class="overlay"><img src="/Book%20Covers/Rogue%20Cocktails.jpg" width="150" height="auto">
+        <img src="Book%20Covers/Rogue%20CocktailsBW.jpg" alt="Temp Portfolio Photo" width="150" height="auto">
+        <div class="overlay"><img src="Book%20Covers/Rogue%20Cocktails.jpg" width="150" height="auto">
         </div>
         <br>
         Unusual cocktails with common ingredients
@@ -295,8 +321,8 @@ Became a recognized expert on Chartreuse
     </div>
     
     <div class="imageContainer">
-        <img src="/Book%20Covers/Beta%20CocktailsBW.jpg" alt="Temp Portfolio Photo" width="150" height="auto">
-        <div class="overlay"><img src="/Book%20Covers/Beta%20Cocktails.jpg" width="150" height="auto">
+        <img src="Book%20Covers/Beta%20CocktailsBW.jpg" alt="Temp Portfolio Photo" width="150" height="auto">
+        <div class="overlay"><img src="Book%20Covers/Beta%20Cocktails.jpg" width="150" height="auto">
         </div>
         <br>
         An update of Rogue Cocktails.
@@ -308,19 +334,15 @@ Became a recognized expert on Chartreuse
 </div>
 
     
-    
-    <!--
-<img src="LimePastel2.png" alt="Temp Portfolio Photo" width="500" height="auto">
-    </div>
--->
-</section> 
-
-    
+</section> <!-- end Publications Section -->
 
 
 </div>
 </body>
-<footer id="footer" class="main" style="background-color: var(--darkColor);">
+    
+<!-- Footer -->    
+    
+<footer id="footer" class="footer" style="background-color: var(--darkColor);">
     
 <br>
 
@@ -403,6 +425,6 @@ Became a recognized expert on Chartreuse
 <br>
     
 
-</footer>
+</footer> <!-- end Footer -->    
 
 </html>
