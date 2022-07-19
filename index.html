@@ -1,6 +1,6 @@
     
 <!-- ====================================================
-Name: Building Blocks - v1.4.3
+Name: Building Blocks - v1.4.4
 Author: Troy Sidle
 
 This site is currently under construction. With more content added, the site will be finalized at its basic level.
@@ -9,7 +9,7 @@ The color scheme change now works, allowing a user to change the color scheme of
 
 Tooltips and a flexbox are now added to Color Scheme Changes and other minor changes.
 
-Comments have been updated.
+There is a pop up window that is functional for one book. The rest will be updated with the same functionality.
 ======================================================== -->    
     
 <!DOCTYPE HTML>
@@ -25,9 +25,9 @@ Comments have been updated.
 <body id="content">
         
 <!--does this script need to be here? Or can it be in <head>?
--->
+
 <script src="main.js"></script>
-    
+-->    
     
 <!-- begin Navigation Menu -->    
 
@@ -248,6 +248,11 @@ Became a recognized expert on Chartreuse
     
 <!-- Publications Section -->
     
+    
+
+
+    
+    
 <section id="publications" class="mainCategory"> 
 <h3>Publications
 </h3>
@@ -257,24 +262,59 @@ Became a recognized expert on Chartreuse
 
 
 
-<!--Book Images-->
+
+<!-- The Modals -->
+<div id="firstBookModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modalContent">
+    <span class="selectClose">&times;</span>
+    <p><b>Batch Cocktails by Maggie Hoffman</b></p>
+    <p>
+    <img src="Book%20Covers/Batch%20Cocktails.jpeg" alt="Temp Portfolio Photo" width="250" height="auto">
+        <!--<div class="overlay"><img src="Book%20Covers/Batch%20Cocktails.jpeg" width="150" height="auto">
+        </div>-->
+    </p>
+    
+    <br>
+    <p>
+        Overview: Recipes for drinks made in larger quantities
+    </p>
+    <br>
+    <br>
+      <p>
+	    My contribution: Honeydew Limeade - Honeydew, Lime, Green Tea, White Peppercorn. This is a non-alcoholic drink that combines several subtle flavors.
+    </p>
+  </div>
+
+</div>
+
+<div id="secondBookModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modalContent">
+    <span class="selectClose">&times;</span>
+    <p>Description of the second book.</p>
+  </div>
+
+</div>
+
+    
+    
+    
     
 <div class="flex-container">
     
-    <div class="imageContainer">
+    <div id="firstBook" class="imageContainer">
 
-        <img src="Book%20Covers/Batch%20CocktailsBW.jpeg" alt="Temp Portfolio Photo" width="150" height="auto">
-        <div class="overlay"><img src="Book%20Covers/Batch%20Cocktails.jpeg" width="150" height="auto">
-        </div>
-        <br>
-        Recipes for drinks made in larger quantities
-        <br>
-        <br>
-	    Honeydew Limeade - Honeydew, Lime, Green Tea, White Peppercorn
+        <img src="Book%20Covers/Batch%20Cocktails.jpeg" alt="Temp Portfolio Photo" width="150" height="auto">
+        <!--<div class="overlay"><img src="Book%20Covers/Batch%20Cocktails.jpeg" width="150" height="auto">
+        </div>-->
+        
 
     </div>
 
-    <div class="imageContainer">
+    <div id="secondBook" class="imageContainer">
         <img src="Book%20Covers/Cocktails%20With%20A%20TwistBW.jpg" alt="Temp Portfolio Photo" width="150" height="auto">
         <div class="overlay"><img src="Book%20Covers/Cocktails%20With%20A%20Twist.jpeg" width="150" height="auto">
         </div>
@@ -333,6 +373,12 @@ Became a recognized expert on Chartreuse
 
 </div>
 
+<!-- Note the script only seems to work after the buttons and divs for the modals.-->
+    
+<script src="main.js">
+</script>
+<!--Book Images-->
+
     
 </section> <!-- end Publications Section -->
 
@@ -342,7 +388,7 @@ Became a recognized expert on Chartreuse
     
 <!-- Footer -->    
     
-<footer id="footer" class="footer" style="background-color: var(--darkColor);">
+<footer id="footer" class="footer">
     
 <br>
 
