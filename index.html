@@ -1,11 +1,11 @@
     
 <!-- ====================================================
-Name: Building Blocks - v1.5.1
+Name: Building Blocks - v1.5.2
 Author: Troy Sidle
 
 This site is currently under construction. With more content added, the site will be finalized at its basic level.
 
-Mobile viewing has been updated.
+Mobile viewing has been updated. The navigation menu is partially functional.
 
 The color scheme change now works, allowing a user to change the color scheme of the entire page. 
 
@@ -13,7 +13,6 @@ Tooltips and a flexbox are now added to Color Scheme Changes and other minor cha
 
 There are pop up windows for each book. 
 
-An about section has been added.
 ======================================================== -->    
     
 <!DOCTYPE HTML>
@@ -28,10 +27,6 @@ An about section has been added.
 
 <body id="content">
         
-<!--does this script need to be here? Or can it be in <head>?
-
-<script src="main.js"></script>
--->    
     
 <!-- begin Navigation Menu -->    
 
@@ -115,12 +110,12 @@ HoneydewLimeade
 </div>
     
 
-<!-- Apply when no Navigation Menu is present>
+<!-- Apply when no Navigation Menu is present> -->
     <div class="heroNavigation">
-    <!--&#9776 is the character for three horizontal lines indicating a menu   
-    <span style="font-size:30px;cursor:pointer" onclick="wideNavigation()">&#9776;</span>
+    <!--&#9776 is the character for three horizontal lines indicating a menu -->
+    <span style="font-size:30px;cursor:pointer" onclick="navigationMenuToggle()">&#9776;</span>
     </div>
--->
+
     
 </div> <!-- end main profile image -->
     
@@ -501,7 +496,7 @@ Became a recognized expert on Chartreuse
 <br>
 
 <div>
-  <img style="vertical-align:middle" src="Image%20Color%20Dial%20(1).png">
+  <img style="vertical-align:middle" src="IconColorDial.png">
   <span style="color: var(--baseColor)">Change Color Scheme</span>
 </div>
 

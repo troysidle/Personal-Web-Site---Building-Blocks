@@ -18,8 +18,18 @@ window.onscroll = function() {navigationWidth()};
 function navigationWidth() {
   if (document.documentElement.scrollTop > 50) {
     
-    document.getElementById("sideNavigation").style.width = "180px";  } else {
-        document.getElementById("sideNavigation").style.width = "215px";
+    document.getElementById("navigationBar").style.width = "180px";  } else {
+        document.getElementById("navigationBar").style.width = "215px";
+  }
+}
+
+
+function navigationMenuToggle() {
+  var x = document.getElementById("navigationBar");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
   }
 }
 
