@@ -1,97 +1,178 @@
-    
-<!-- ====================================================
-Name: Building Blocks - v1.5.2
+<!--*********************************************************************
 Author: Troy Sidle
 
-This site is currently under construction. With more content added, the site will be finalized at its basic level.
+Version: 1.1.6
+This page uses Bootstrap.
 
-Mobile viewing has been updated. The navigation menu is partially functional.
+This version has a home image as a background with text.
 
-The color scheme change now works, allowing a user to change the color scheme of the entire page. 
+This scales well on a mobile device. It has a menu that is hidden, but can be displayed with a menu button.
 
-Tooltips and a flexbox are now added to Color Scheme Changes and other minor changes.
+Google Font Montserrat has been added, bold is enabled, more format adjustments.
 
-There are pop up windows for each book. 
+Custom colors and other design elements added.
 
-======================================================== -->    
-    
-<!DOCTYPE HTML>
-<html>
-    
+Added icons for social media.
+
+Added more functionality for mobile devices - close navigation bar when clicking off of it
+
+*********************************************************************-->
+
+
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>HoneydewLimeade</title>
-<link href="Stylesheet.css" rel="stylesheet">
+  <title>Bootstrap 5 with Mobile Menu</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <!-- my stylesheet -->
+  <link href="Stylesheet.css" rel="stylesheet">
+  
+  <!-- Google Fonts for Montserrat -->    
+  <link href='https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap' rel='stylesheet'>      
+    
+
+
+  <!--This points to a library, rather than hosting Bootstrap locally.-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+
+
 </head>
+<body>
 
+    
+<!-- ======= Mobile nav toggle button ======= -->
 
-<body id="content">
+<i class="bi mobileNavigationToggleButton d-xl-none"> <!-- don't display on large screens -->
+    
+<div>
+    <div class="menuBarRectangle">
+</div>
+    <div class="menuBarRectangle">
+</div>
+    <div class="menuBarRectangle">
+</div>
+</div>
+</i>
         
     
-<!-- begin Navigation Menu -->    
-
-<div id="navigationBar" class="sideNavigation">
+  <!-- off navigation menu area -->
+  <div id="clickOffNavigationBar" class="hideMenuArea d-xl-none"></div> <!-- don't display on large screens -->
 
     
-<!-- Home name and logo -->
-<div style="text-align: center">
+    
+    
+    
+<!-- Social Media Links -->
+    
+    
+    
+    
+    
+    <div id="socialMediaLinks">
+    <div class="flex-container">
+        
+        <!-- Twitter -->
+       
+           
+        <div id="TwitterLink" class="socialMediaIcon"> 
+           
+            <!-- Twitter Icon -->
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="var(--white)" class="bi bi-twitter" viewBox="0 0 16 16">
+            <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"/>
+        </svg>
+        </div>
 
-<a href="#home" style="color: var(--baseColor)">
+        <div id="LinkedInLink" class="socialMediaIcon">
+            
+              <!-- LinkedIn Icon -->
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="var(--white)" class="bi bi-linkedin" viewBox="0 0 16 16">
+  <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"/>
+</svg>
+        </div>
+        
+        
+        <div id="GithubLink" class="socialMediaIcon">
+            
+        
+        <!-- Github Icon -->
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="var(--white)" class="bi bi-github" viewBox="0 0 16 16">
+  <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
+</svg>
+        </div>
+        
+        
+        
+         <div id="MediumLink" class="socialMediaIcon">
+            
+        
+        <!-- Medium Icon -->
+        
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="var(--white)" class="bi bi-medium" viewBox="0 0 16 16">
+  <path d="M9.025 8c0 2.485-2.02 4.5-4.513 4.5A4.506 4.506 0 0 1 0 8c0-2.486 2.02-4.5 4.512-4.5A4.506 4.506 0 0 1 9.025 8zm4.95 0c0 2.34-1.01 4.236-2.256 4.236-1.246 0-2.256-1.897-2.256-4.236 0-2.34 1.01-4.236 2.256-4.236 1.246 0 2.256 1.897 2.256 4.236zM16 8c0 2.096-.355 3.795-.794 3.795-.438 0-.793-1.7-.793-3.795 0-2.096.355-3.795.794-3.795.438 0 .793 1.699.793 3.795z"/>
+</svg>
+        
+        </div>
+    </div>
+    </div>
+    
 
-<img src="HoneydewLimeade%20Icon.png" alt="HoneydewLimeade logo" class="icon" width="80" height="auto">
-HoneydewLimeade    
-</a>
-
+    
+<!-- Delete this?-->
+<div class="flex-container">
 </div>
-<!-- end Home name and logo -->    
     
+<!-- Header  -->
+    
+  <header id="header">
+    <div class="d-flex flex-column">
+      
+      <!-- Logo -->
 
-<!-- Page navigation links -->
-    
-<div id="navigationLinks" class="navigation">
-<br>
-<a href="#about">About</a>
-<a href="#education">Education</a>
-<a href="#workExperience">Experience</a>
-<a href="#publications">Publications</a>
-</div>
-
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-
-<!-- Footer link to change color scheme -->    
-    
-<a href="#footer">
-<div class="tooltip"><img src="IconColorDial.png" alt="Color Scheme Change Icon" class="transparentCircle">
-  <span class="tooltiptext">Color Scheme Change</span>
-</div>    
-    
+        
+      <div class="profile logo">
 
     
-</a>
+
+          <a href="#" class="navbar-brand">
+                <div>
+                    <div class="logoFrame">
+                    </div>
+                    <img class="mx-auto d-block" src="HoneydewLimeadeIcon.png" height="125px" alt="HoneydewLimeade.com">
+                </div>
+            </a>
+
+          
+
+      </div>
+
+      <nav id="navbar" class="nav-menu navbar">
+          
+        <ul>
+          <li><a href="#about" class="nav-link scrollto"><i class="bx bx-user"></i> <span>ABOUT</span></a></li>
+          <li><a href="#education" class="nav-link scrollto"><i class="bx bx-envelope"></i> <span>EDUCATION</span></a></li>
+          <li><a href="#workExperience" class="nav-link scrollto"><i class="bx bx-envelope"></i> <span>EXPERIENCE</span></a></li>
+          <li><a href="#publications" class="nav-link scrollto"><i class="bx bx-envelope"></i> <span>PUBLICATIONS</span></a></li> 
+        </ul>
+      </nav><!-- .nav-menu -->
     
-</div> <!-- end of Navigation Menu-->
-    
+    </div>
+  </header><!-- End Header -->
 
     
-<!-- main content -->    
-    
-<div class="main">    
-    
-
 <!-- home -->    
 
-<section id="home">
+<section id="home" class="justify-content-center">
+
+<!--  -->    
     
-<!-- main profile image -->
     
-<div class="hero-image">
+<!-- profile image -->
     
+<div class="heroImage">
+        
     <!-- under construction notice -->
     
     <div class="underConstruction">
@@ -100,30 +181,31 @@ HoneydewLimeade
     Follow along with the process on <a style="color: var(--contrastColor)" href="http://medium.com/@troysidle">Medium</a>.
     </div>
     
-<!-- main profile text -->
+<!-- profile text -->
     
-<div class="hero-text">
+    <div class="heroText">
     
-    <h1>Troy Sidle</h1>
-    <h2>Web Developer</h2>
+        <h1><b>TROY SIDLE</b></h1>
+        <p><b><span style="font-size: 20px">web developer</span></b><p>
     
-</div>
-    
-
-<!-- Apply when no Navigation Menu is present> -->
-    <div class="heroNavigation">
-    <!--&#9776 is the character for three horizontal lines indicating a menu -->
-    <span style="font-size:30px;cursor:pointer" onclick="navigationMenuToggle()">&#9776;</span>
     </div>
+    
+    
+</div> <!-- end profile image -->
 
-    
-</div> <!-- end main profile image -->
-    
 </section> <!-- end home -->
     
+<main id="main">    
+    
+    
+    
+    
 <!-- About Section -->    
+    
+<!-- The section is a container, is full screen wide, has a wide padding (set to 5), has a blue background with white text, centered.-->
 
-<section id="about" class="mainCategory">        
+
+<section id="about" class="container-fluid p-5 bg-dark text-white text-left">        
     <h3 class="headerCategory">About
     </h3>
     <h2>
@@ -133,17 +215,16 @@ HoneydewLimeade
         This is a personal site I’ve built from the bottom up, incorporating the building blocks of web development as I go.
     </p>
     <p>
-        Why HoneydewLimeade? It’s a nod to my career in the hospitality industry where I specialized in cocktails. Honeydew Limeade is one of the non-alcoholic drinks published in Batch Cocktails by Maggie Hoffman.
+        Why HoneydewLimeade? It’s a nod to my career in the hospitality industry where I specialized in cocktails. Honeydew Limeade is one of the drinks published in Batch Cocktails by Maggie Hoffman.
     </p>
     <p>
         Working professionally in the hospitality industry for over 15 years, I honed skills of craftsmanship, discipline, and creativity. With a degree in computer science, I’m now utilizing those skills and applying them to web development.
     </p>
 </section><!-- end About Section -->
-    
 
 <!-- Education Section -->
 
-<section id="education" class="mainCategory"> 
+<section id="education" class="container-fluid p-5 bg-white text-dark text-left"> 
     <h3 class="headerCategory">Education
     </h3>
     <p>
@@ -158,7 +239,7 @@ HoneydewLimeade
     
 <!-- Experience Section --> 
 
-<section id="workExperience" class="mainCategory">
+<section id="workExperience" class="container-fluid p-5 bg-dark text-white text-left">
 <h3>Experience
 </h3>
 <h4>
@@ -263,16 +344,11 @@ Became a recognized expert on Chartreuse
 </p>    
     
 </section> <!-- end Education Section -->
-    
+
     
 <!-- Publications Section -->
-    
-    
 
-
-    
-    
-<section id="publications" class="mainCategory"> 
+<section id="publications" class="container-fluid p-5 bg-white text-dark text-left"> 
 <h3>Publications
 </h3>
     <p>Having worked professionally in the cocktail industry, from time to time I have been asked to contribute recipes for books on a particular theme.
@@ -443,70 +519,67 @@ Became a recognized expert on Chartreuse
     
 <div class="flex-container">
     
-    <div id="firstBook" class="imageContainer">
-
-        <img src="BookCovers/BatchCocktails.jpeg" alt="Temp Portfolio Photo" width="150" height="auto">
-        
-
+    <div id="firstBook" class="imageContainer"> 
+        <img src="BookCovers/BatchCocktails.jpeg" alt="Batch Cocktails" width="auto" height="300">
     </div>
 
     <div id="secondBook" class="imageContainer">
-        <img src="BookCovers/CocktailsWithATwist.jpeg" alt="Temp Portfolio Photo" width="150" height="auto">
+        <img src="BookCovers/CocktailsWithATwist.jpeg" alt="Cocktails With a Twist" width="auto" height="300">
     </div>
 
     <div id="thirdBook" class="imageContainer">
-        <img src="BookCovers/WayWeAte.jpeg" alt="Temp Portfolio Photo" width="150" height="auto">
+        <img src="BookCovers/WayWeAte.jpeg" alt="The Way We Ate" width="auto" height="300">
     </div>
     
     <div id="fourthBook" class="imageContainer">
-        <img src="BookCovers/Bartender'sManifesto.jpeg" alt="Temp Portfolio Photo" width="150" height="auto">
+        <img src="BookCovers/Bartender'sManifesto.jpeg" alt="Bartender's Manifesto" width="auto" height="300">
     </div>
     
     <div id="fifthBook" class="imageContainer">
-        <img src="BookCovers/RogueCocktails.jpg" alt="Temp Portfolio Photo" width="150" height="auto">
+        <img src="BookCovers/RogueCocktails.jpg" alt="Rogue Cocktails" width="225" height="auto">
         <br>
     </div>
     
     <div id="sixthBook" class="imageContainer">
-        <img src="BookCovers/BetaCocktails.jpg" alt="Temp Portfolio Photo" width="150" height="auto">
-        <div class="overlay"><img src="BookCovers/BetaCocktails.jpg" width="200" height="auto">
+        <img src="BookCovers/BetaCocktails.jpg" alt="Beta Cocktails" width="225" height="auto">
+        <div class="overlay"><img src="BookCovers/BetaCocktails.jpg" width="230" height="auto">
         </div>
         
     </div>
 
 </div>
 
-<!-- Note the script only seems to work after the buttons and divs for the modals.-->
-    
-<script src="main.js">
-</script>
 <!--Book Images-->
 
     
 </section> <!-- end Publications Section -->
 
+  
 
-</div>
-</body>
-    
-<!-- Footer -->    
+</main>
+
+
+<!--
+<!-- Footer  --
     
 <footer id="footer" class="footer">
     
 <br>
 
+<!-- add this back to add Change Color Scheme --
 <div>
-  <img style="vertical-align:middle" src="IconColorDial.png">
+  <img style="vertical-align:middle" src="Image%20Color%20Dial%20(1).png">
   <span style="color: var(--baseColor)">Change Color Scheme</span>
 </div>
 
+
     
-    <!--This table holds three color schemes.-->    
+    <!--This table holds three color schemes.  --
 <table style="width: 600px; border: 10px solid lightblue);">
   <tr class="colorSchemeContainer2">
     <td class="colorSchemeContainer">
         
-        <!--This table holds five colors of type A-->
+        <!--This table holds five colors of type A --
         <div class="tooltip"> 
              
         <table class="colorSchemeContainer2" style="width: 200px; height: 10px;" onclick="setTheme('monochromeGreen')">
@@ -524,7 +597,7 @@ Became a recognized expert on Chartreuse
     </td> 
     <td class="colorSchemeContainer">
     
-        <!--This table holds five colors of type B-->
+        <!--This table holds five colors of type B --
         
         
         <div class="tooltip"> 
@@ -547,7 +620,7 @@ Became a recognized expert on Chartreuse
 
 
         
-        <!--This table holds five colors of type C-->
+        <!--This table holds five colors of type C --
         
         <div class="tooltip"> 
         
@@ -569,11 +642,17 @@ Became a recognized expert on Chartreuse
 
 <br>
     
-    <!--Provide Buttons to use the changeScheme to alter the apearance of "content"-->
+    <!--Provide Buttons to use the changeScheme to alter the apearance of "content" --
         
 <br>
     
 
-</footer> <!-- end Footer -->    
+</footer> <!-- end Footer --> 
+    
+<!-- script -->
 
+<script src="main.js"></script>
+
+    
+</body>
 </html>
