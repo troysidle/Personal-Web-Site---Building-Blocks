@@ -1,0 +1,587 @@
+/*--Establish the color scheme--*/
+
+/*--This color scheme is monochromatic in green tones--*/
+
+
+:root {
+
+  --navigationBarWidth: 250px;    
+    
+    
+  --white: #ffffff;
+  --nearwhite: #f3f3f3;
+  --nearBlackTone: #434343;
+  --lighttone: #c8d8c2;
+  --mediumtone: #8e9c88;
+  --darkTone: #434343;
+    
+/* Monochrome Green
+    These colors are monochrome in a green hue.
+*/
+
+--baseColorMonochromeGreen: #C1F5C6;
+
+--lightMonochromeGreen: #ADDBB1;
+
+--mediumMonochromeGreen: #93BA96;
+
+--darkMonochromeGreen: #283329;    
+    
+--contrastMonochromeGreen: #4F6350;
+
+
+/*Complementary Produce
+    These colors are complementary to green and resemble produce colors like blackberries and mango.
+*/
+
+
+--baseColorComplementaryProduce: #C1F5C6;
+
+--lightComplementaryProduce: #C5B8CF;
+
+--mediumComplementaryProduce: #786056;
+
+--darkComplementaryProduce: #33104A;
+
+--contrastComplementaryProduce: #CC511D;
+
+
+/*Complementary Vista
+    These colors are complementary to green and resemble a vista of wheat fields and blue sky.
+*/
+
+--baseColorComplementaryVista: #C1F5C6;
+
+--lightComplementaryVista: #F2EDB8;
+
+--mediumComplementaryVista: #9FE1F5;
+
+--darkComplementaryVista: #241066;
+
+--contrastComplementaryVista: #FF8F1F;
+    
+    
+}
+
+
+/*----- Color Scheme -----*/
+
+/* Monochrome Green
+    These colors are monochrome in a green hue.
+*/
+
+.monochromeGreen {
+
+--baseColor: var(--baseColorMonochromeGreen);
+
+--lightColor: var(--lightMonochromeGreen);
+
+--mediumColor: var(--mediumMonochromeGreen);
+
+--darkColor: var(--darkMonochromeGreen);    
+    
+--contrastColor: var(--contrastMonochromeGreen);
+}
+
+/*Complementary Produce
+    These colors are complementary to green and resemble produce colors like blackberries and mango.
+*/
+
+.complementaryProduce {
+--baseColor: var(--baseColorComplementaryProduce);
+
+--lightColor: var(--lightComplementaryProduce);
+
+--mediumColor: var(--mediumComplementaryProduce);
+
+--darkColor: var(--darkComplementaryProduce);    
+    
+--contrastColor: var(--contrastComplementaryProduce);
+}
+
+/*Complementary Vista
+    These colors are complementary to green and resemble a vista of wheat fields and blue sky.
+*/
+
+.complementaryVista {
+--baseColor: var(--baseColorComplementaryVista);
+
+--lightColor: var(--lightComplementaryVista);
+
+--mediumColor: var(--mediumComplementaryVista);
+
+--darkColor: var(--darkComplementaryVista);    
+    
+--contrastColor: var(--contrastComplementaryVista);
+
+}
+
+/* Font called by Google API */
+
+/* need to determine how to make bold */
+
+h1,h2,h3,h4,h5,h6 {
+    font-family: 'Montserrat', sans-serif;
+}
+
+a {
+    color: var(--darkColor);
+    text-decoration: none;
+}
+/* unvisited link */
+a:link {
+  color: var(--darkColor);
+    text-decoration: none;
+}
+
+/* visited link */
+a:visited {
+  color: var(--contrastColor);
+    text-decoration: none;
+}
+
+/* mouse over link */
+a:hover {
+  text-decoration: none;
+  color: red;
+}
+
+/* selected link */
+a:active {
+  color: var(--contrastColor);
+  text-decoration: none;
+}
+
+
+
+/* for spacing the logo in the navigation bar*/
+.logo {
+
+  margin-top: 50px;
+  margin-bottom: 50px;
+  position: relative;
+  z-index: 1;
+}
+
+.logoFrame {
+
+  content: '';
+  display: block;
+  width: 115px;
+  height: 123px;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  border: 2px solid var(--mediumColor);
+    
+  top: 69px;
+  z-index: -1;
+  transition: all 1.0s; /*is this working or needed?*/
+  cursor: pointer
+}
+
+
+/*
+create a background image so that text can be placed on top.
+*/   
+    
+.heroImage {
+  background-image: url("VibrantHudsonBackground.jpg");
+  height: 700px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(100%);
+}
+
+.heroImage:hover {
+   background-image: url("VibrantHudsonBackground.jpg"); 
+   background: clear;
+    -webkit-filter: grayscale(0%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(0%);
+}
+
+.heroText {
+  text-align: right;
+  position: absolute;
+  top: 65%;
+  left: 35%;
+  transform: translate(-50%, -50%);
+  color: var(--darkTone);
+}
+
+.underConstruction {
+  text-align: left;
+  position: absolute;
+  top: 20%;
+  left: 30%;
+  transform: translate(-50%, -50%);
+  max-width: 300px;
+  background-color: #C1F5C699;
+}
+
+.cookiesNoticeWindow {
+  text-align: left;
+  position: absolute;
+  top: 20%;
+  left: 30%;
+  transform: translate(-50%, -50%);
+  max-width: 300px;
+  background-color: #C1F5C6;
+}
+
+
+
+/*--------------------------------------------*/
+.mainCategory:nth-of-type(odd) {
+    min-height: 400px;
+    padding: 40px;
+    display: flex;
+   
+    background: var(--mediumColor);
+    flex-direction: column;
+    justify-content: top;
+    align-items: left;
+    color: var(--darkColor);
+  }
+
+  .mainCategory:nth-of-type(even) {
+    min-height: 200px;
+    padding: 40px;
+    display: flex;
+   
+    background: var(--nearwhite);
+    flex-direction: column;
+    justify-content: top;
+    align-items: left;
+    color: var(--contrastColor);
+  }
+
+  .mainCategory h1 {
+    color: var(--contrastColor);
+  }
+
+
+.mainCategory h4 {
+    color: var(--darkColor);
+}
+
+  .mainCategory button {
+    color: var(--contrastColor);
+    background: var(--darkColor);
+    padding: 10px 20px;
+    border: 0;
+    border-radius: 5px;
+  }
+/*--------------------------------------------*/
+
+
+
+
+/*For the navigation bar*/
+
+/*The navigation bar is in a header. The full screen horizontal position of navigation bar is controlled by the header.*/
+
+#header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: var(--navigationBarWidth);
+  transition: all ease-in-out 0.25s;
+  z-index: 9997;
+  transition: all 0.5s;
+  padding: 0 15px;
+  background: var(--contrastColor);
+  overflow-y: auto;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  line-height: 0.7; /*distance between navigation menu options*/
+}
+
+/* for the the area outside the navigation bar */
+#clickOffNavigationBar {
+  display: none;
+}
+
+#body {
+    left: var(--navigationBarWidth);  
+}
+
+#main {
+  margin-left: var(--navigationBarWidth);
+}
+
+/*--------------------------------------------------------------
+# Navigation Menu
+--------------------------------------------------------------*/
+/* Desktop Navigation */
+.nav-menu {
+  padding: 30px 0 0 0;
+  z-index: 9000;
+}
+.nav-menu * {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+    z-index: 12001; 
+}
+.nav-menu > ul > li {
+  position: relative;
+  white-space: nowrap;
+    z-index: 12001;
+}
+.nav-menu a, .nav-menu a:focus {
+  display: flex;
+  align-items: center;
+  color: var(--mediumColor);
+  padding: 12px 15px;
+  margin-bottom: 8px;
+  transition: 0.3s;
+  font-size: 24px;
+  z-index: 12001;
+}
+.nav-menu a i, .nav-menu a:focus i {
+  font-size: 24px;
+  padding-right: 8px;
+  color: #6f7180;
+    z-index: 12001;
+}
+.nav-menu a:hover, .nav-menu .active, .nav-menu .active:focus, .nav-menu li:hover > a {
+  text-decoration: none;
+  color: white;
+    z-index: 12001;
+}
+.nav-menu a:hover i, .nav-menu .active i, .nav-menu .active:focus i, .nav-menu li:hover > a i {
+  color: black;
+    z-index: 12001;
+}
+
+/* Mobile Navigation */
+.mobileNavigationToggleButton {
+  position: fixed;
+  right: 15px;
+  top: 15px;
+  z-index: 100;
+  z-index: 10;
+  border: 0;  
+  width: 40px;
+  height: 40px;
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.menuBarRectangle {
+  width: 40px;
+  height: 5px;
+  margin: 5px;
+  padding: 3px;
+  background: var(--darkTone); 
+  outline: 1.3px solid grey;}
+
+/* Mobile Navigation */
+.hideMenuArea {
+  position: fixed;
+  left: var(--navigationBarWidth);
+  top: 0;
+  z-index: 9998;
+  border: 0;
+  background-color: clear; /* change this to #aaaaaaee to see the effect */
+  color: #fff;
+  width: 100%;
+  height: 100%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 0;
+  cursor: pointer;
+}
+
+
+
+/* hide the scroll bar */
+.mobile-nav-active {
+  overflow: hidden;
+}
+
+/* show the mobile navigation menu */
+.mobile-nav-active #header {
+  left: 0px;
+}
+
+/* show the mobile navigation menu */
+.mobile-nav-active #clickOffNavigationBar {
+  display: block;
+}
+
+/* Social Media Links */
+
+
+.socialMediaLinksContainer{
+    position: absolute;
+    top: 550px;
+    right: 30px;
+    height: 80px;
+    background-color: grey;
+    z-index: 1000;
+
+}
+
+
+.socialMediaLinksContainer2{
+    position: relative;
+    height: 70px;
+    background-color: black;
+    z-index: 1001;
+
+    }
+
+#socialMediaLinks
+{
+  position: absolute;
+  left: 15px;
+  z-index: 2;
+
+}
+
+.socialMediaIcon{
+  height: auto;
+  width: 50px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  padding: 10px;
+  margin: 2px;
+}
+
+.XsocialMediaIcons {
+  width: 500px;
+  height: auto;
+  margin: 5px;
+  padding: 3px;
+  background: var(--white); 
+  outline: 1.3px solid grey;
+  position: absolute;
+  top: 650px;
+  right: 365px;
+  z-index: 9998;
+  transition: all 1.0s; /*is this working or needed?*/
+  cursor: pointer;
+
+    /*
+  height: auto;
+  width: 350px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  padding: 45px;
+    */
+}
+
+
+
+/* Cookies */
+
+.cookiesBar{
+
+    top: 500px;
+    height: 30px;
+    padding: 0;
+    margin: 0;
+    background-color: var(--baseColor);
+
+ 
+
+}
+
+.designBar {
+    position: absolute;
+    top: 635px;
+    z-index: 10000;
+    background-color: var(--baseColor);
+    min-height: 42px;
+}
+
+
+
+.cookiesBar2{
+      position: sticky;
+        top: 450px;
+       height: 100px;
+    background-color: var(--baseColor);
+        z-index: 120000;
+}
+
+.acceptCookiesButton {
+  width: 70px;
+  height: 25px;
+  background-color: var(--mediumColor); 
+  color: var(--contrastColor);
+  outline: 1.3px solid grey;
+  margin-right: 13px;
+  margin-left: 13px;
+
+}
+
+
+
+/* for displaying the books in Porfolio */
+
+.imageContainer{
+  height: auto;
+  width: auto;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  background: blue;
+
+}
+
+.imageContainer:hover .overlay {
+  opacity: 1;
+
+}
+.overlay {
+  position: absolute; 
+  top: 0px;
+  left: 0px;
+  background: clear; /* see-through */
+  color: #f1f1f1; 
+  transition: .125s ease;
+  opacity:0;
+  color: white;
+  font-size: 20px;
+  text-align: center;
+
+}
+
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/*This controls the navigation menu upon resizing*/
+
+@media (max-width: 1030px) {
+  #header {
+    left: -300px;
+    }
+
+   #main {
+    margin-left: 0px;
+      }
+  }
+
+/* Footer */
+
+.footer {
+  margin-left: var(--navigationBarWidth); /* Same as the width of the sidenav */
+  padding: 0px 180px;
+  background-color: var(--darkColor);
+}

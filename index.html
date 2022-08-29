@@ -1,7 +1,7 @@
 <!--*********************************************************************
 Author: Troy Sidle
 
-Version: 1.1.6
+Version: 1.2.2
 This page uses Bootstrap.
 
 This version has a home image as a background with text.
@@ -16,6 +16,16 @@ Added icons for social media.
 
 Added more functionality for mobile devices - close navigation bar when clicking off of it
 
+More functionality and content added.
+
+Modals improved.
+
+Favicon created and added. New color feature on Hero image.
+
+Social Media buttons are now working.
+
+Cookies are implemented and a user cookie notice is added. Slight adjustments for mobile.
+
 *********************************************************************-->
 
 
@@ -27,16 +37,18 @@ Added more functionality for mobile devices - close navigation bar when clicking
   <meta name="viewport" content="width=device-width, initial-scale=1">
   
   <!-- my stylesheet -->
-  <link href="Stylesheet.css" rel="stylesheet">
+  <link href="stylesheet.css" rel="stylesheet">
   
   <!-- Google Fonts for Montserrat -->    
   <link href='https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap' rel='stylesheet'>      
     
-
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="HoneydewLimeadeFavicon.png">
 
   <!--This points to a library, rather than hosting Bootstrap locally.-->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+
 
 
 </head>
@@ -61,68 +73,109 @@ Added more functionality for mobile devices - close navigation bar when clicking
   <!-- off navigation menu area -->
   <div id="clickOffNavigationBar" class="hideMenuArea d-xl-none"></div> <!-- don't display on large screens -->
 
+
     
     
     
-    
-<!-- Social Media Links -->
-    
+<!-- Social Media Links 
     
     
-    
-    
-    <div id="socialMediaLinks">
-    <div class="flex-container">
+
+    <div class="socialMediaLinksContainer d-flex justify-content-end">
+            <div class="socialMediaLinksContainer2"></div>-->
         
+            <!-- Cookies Notice Bar 
+<div class="d-flex cookiesBar position-sticky"></div>
+<div class="d-flex position-sticky cookiesBar top-50 start-0 translate-start"></div>
+    -->
+  
+<!-- Full Length Design Bar-->
+<div class="container-fluid designBar">
+    
+<!-- Cookies Notice -->
+<!--<div id="cookieNotice" class="text-end" style="display: none;">-->
+  <div class="d-flex">
+      <!--<div class="p-1"><!--<p class="fs-6">
+      This site uses cookies to store your preferences.</p>
+          </div>-->
+                <!--<div class="acceptCookiesButton text-center" onclick="acceptCookieConsent();">Got it.</div>-->
+    </div>
+<!--</div>-->
+    
+
+  
+</div>
+    
+  
+  <div class="d-xl-flex p-3 bg-transparent socialMediaLinksContainer">
+    
+    <div class="p-0 flex-grow-1">
+    
+    <div class="p-1 d-flex justify-content-end">
+ 
+    
+    <!--<div class="socialMediaLinksContainer2 d-inline-flex">-->
         <!-- Twitter -->
        
            
         <div id="TwitterLink" class="socialMediaIcon"> 
-           
+           <a href="https://twitter.com/HoneydewLimeade">
             <!-- Twitter Icon -->
-        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="var(--white)" class="bi bi-twitter" viewBox="0 0 16 16">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="var(--white)" class="bi bi-twitter" viewBox="0 0 16 16">
             <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"/>
         </svg>
+            </a>
         </div>
 
         <div id="LinkedInLink" class="socialMediaIcon">
-            
+            <a href="https://www.linkedin.com/in/troysidle/">
               <!-- LinkedIn Icon -->
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="var(--white)" class="bi bi-linkedin" viewBox="0 0 16 16">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="var(--white)" class="bi bi-linkedin" viewBox="0 0 16 16">
   <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"/>
 </svg>
+            </a>
         </div>
         
         
         <div id="GithubLink" class="socialMediaIcon">
-            
+        <a href="https://github.com/troysidle">    
         
         <!-- Github Icon -->
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="var(--white)" class="bi bi-github" viewBox="0 0 16 16">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="var(--white)" class="bi bi-github" viewBox="0 0 16 16">
   <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
 </svg>
+            </a>
         </div>
         
         
         
          <div id="MediumLink" class="socialMediaIcon">
-            
+            <a href="http://medium.com/@troysidle"> 
         
         <!-- Medium Icon -->
         
-        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="var(--white)" class="bi bi-medium" viewBox="0 0 16 16">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="var(--white)" class="bi bi-medium" viewBox="0 0 16 16">
   <path d="M9.025 8c0 2.485-2.02 4.5-4.513 4.5A4.506 4.506 0 0 1 0 8c0-2.486 2.02-4.5 4.512-4.5A4.506 4.506 0 0 1 9.025 8zm4.95 0c0 2.34-1.01 4.236-2.256 4.236-1.246 0-2.256-1.897-2.256-4.236 0-2.34 1.01-4.236 2.256-4.236 1.246 0 2.256 1.897 2.256 4.236zM16 8c0 2.096-.355 3.795-.794 3.795-.438 0-.793-1.7-.793-3.795 0-2.096.355-3.795.794-3.795.438 0 .793 1.699.793 3.795z"/>
 </svg>
-        
-        </div>
+        </a>
     </div>
     </div>
+      </div>
+    
     
 
+  
+   <!-- social media links spacer -->
+    <div class="p-5 m-3 bg-transparent"></div> 
+ </div>
     
 <!-- Delete this?-->
 <div class="flex-container">
 </div>
+    
+    
+
+
     
 <!-- Header  -->
     
@@ -169,17 +222,40 @@ Added more functionality for mobile devices - close navigation bar when clicking
 <!--  -->    
     
     
+    
 <!-- profile image -->
     
 <div class="heroImage">
+    
+
+
         
     <!-- under construction notice -->
     
-    <div class="underConstruction">
+    <div class="underConstruction p-3 text-center">
     HoneydewLimeade is under construction.
     <br>
+    <br>
     Follow along with the process on <a style="color: var(--contrastColor)" href="http://medium.com/@troysidle">Medium</a>.
+<!--<div class="p-1"><p class="fs-6">
+        This site uses cookies to store your preferences.</p>
+        </div>
+        <div class="acceptCookiesButton text-center" onclick="acceptCookieConsent();">Got it.</div>-->
     </div>
+    
+    <!-- Cookies Notice -->
+    <div id="cookieNotice" style="display: none;" class="cookiesNoticeWindow p-3">
+        <div class="p-1 justify-content-center align-items-center">
+        <div class="p-1"><p class="fs-6">
+        This site uses cookies to store your preferences.</p>
+        </div >
+        <div class="acceptCookiesButton text-center" onclick="acceptCookieConsent();">Got it.</div>
+        </div>
+    </div>
+    
+    
+    
+
     
 <!-- profile text -->
     
@@ -195,6 +271,7 @@ Added more functionality for mobile devices - close navigation bar when clicking
 
 </section> <!-- end home -->
     
+    
 <main id="main">    
     
     
@@ -205,26 +282,29 @@ Added more functionality for mobile devices - close navigation bar when clicking
 <!-- The section is a container, is full screen wide, has a wide padding (set to 5), has a blue background with white text, centered.-->
 
 
-<section id="about" class="container-fluid p-5 bg-dark text-white text-left">        
+<section id="about" class="mainCategory container-fluid p-5 text-left">        
     <h3 class="headerCategory">About
     </h3>
     <h2>
     Welcome to HoneydewLimeade.com
     </h2>
     <p>
-        This is a personal site I’ve built from the bottom up, incorporating the building blocks of web development as I go.
+        This is a personal site built from the bottom up, incorporating the building blocks of web development as I go.
     </p>
     <p>
-        Why HoneydewLimeade? It’s a nod to my career in the hospitality industry where I specialized in cocktails. Honeydew Limeade is one of the drinks published in Batch Cocktails by Maggie Hoffman.
+        Why HoneydewLimeade? It’s a nod to my career in the hospitality industry where I specialized in cocktails. Honeydew Limeade is one of the drinks I have published in Batch Cocktails by Maggie Hoffman.
     </p>
     <p>
         Working professionally in the hospitality industry for over 15 years, I honed skills of craftsmanship, discipline, and creativity. With a degree in computer science, I’m now utilizing those skills and applying them to web development.
+    </p>
+    <p>
+        This site is written in Bootstrap 5 framework, with inspiration from <b><a href="https://bootstrapmade.com/">Bootstrapmade</a></b> templates. General references for HTML, CSS and JavaScript were primarily sourced from <b><a href="https://w3schools.com/">w3schools</a></b>. The code is publicly available on <b><a href="https://github.com/troysidle">Github.</a></b>
     </p>
 </section><!-- end About Section -->
 
 <!-- Education Section -->
 
-<section id="education" class="container-fluid p-5 bg-white text-dark text-left"> 
+<section id="education" class="mainCategory container-fluid p-5 text-dark text-left"> 
     <h3 class="headerCategory">Education
     </h3>
     <p>
@@ -239,9 +319,24 @@ Added more functionality for mobile devices - close navigation bar when clicking
     
 <!-- Experience Section --> 
 
-<section id="workExperience" class="container-fluid p-5 bg-dark text-white text-left">
+<section id="workExperience" class="mainCategory container-fluid p-5 text-left">
 <h3>Experience
 </h3>
+<br>
+<h4>Skin Contact, New York, NY</h4>							
+<p>7/2020 – Current</p>
+<p>
+Server 
+</p>
+<p>
+Maintain knowledge of natural wine list that changes weekly 
+</p>
+<p>
+Assist with data maintenance and inventory
+</p> 
+
+<br>
+
 <h4>
 The Dinex Group, New York, NY
 </h4>
@@ -286,7 +381,7 @@ Bartender / Server
 <h4>Skin Contact, New York, NY</h4>							
 <p>9/2020 – 12/2020</p>
 <p>
-Bartender / Server 
+Server 
 </p>
 <p>
 Maintained knowledge of natural wine list that changed weekly 
@@ -348,10 +443,10 @@ Became a recognized expert on Chartreuse
     
 <!-- Publications Section -->
 
-<section id="publications" class="container-fluid p-5 bg-white text-dark text-left"> 
-<h3>Publications
-</h3>
-    <p>Having worked professionally in the cocktail industry, from time to time I have been asked to contribute recipes for books on a particular theme.
+<section id="publications" class="mainCategory container-fluid p-5 text-left"> 
+<h3>Publications</h3>
+    
+    <p>During my career working in the cocktail industry, I've often been asked to contribute recipes for books. While the themes have differed, my straightforward style is to create approachable cocktails from classic templates.
     </p>
 
 
@@ -359,16 +454,256 @@ Became a recognized expert on Chartreuse
 
 
 <!-- The Modals -->
+    
+<div class="d-flex flex-wrap"> <!-- container for all the images to move around in as the window is resized. -->
+    
+    
+<!-- Trigger for Batch Cocktails Modal-->
+<div class="btn imageContainer p-4 m-3" data-bs-toggle="modal" data-bs-target="#BatchCocktailsModal" style="background: var(--mediumColor)">
+    <img src="BookCovers/BatchCocktails.jpeg" style="filter: grayscale(100%)" alt="Temp Portfolio Photo" width="200" height="auto">
+    <div class="overlay p-4">
+        <img src="BookCovers/BatchCocktails.jpeg" width="202" height="auto">
+    </div>
+</div>
+
+<!-- Batch Cocktails Modal -->
+<div class="modal fade" id="BatchCocktailsModal" tabindex="-1" aria-labelledby="BatchCocktailsModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 class="modal-title" id="BatchCocktailsModalLabel">Batch Cocktails</h3>
+             
+
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+        
+      <div class="modal-body">
+          <div class="d-flex">
+              <div>
+       <img class="mx-auto d-block" src="BookCovers/BatchCocktails.jpeg" alt="Batch Cocktails" width="300" height="auto">
+        <div class="overlay"><img src="BookCovers/BatchCocktails.jpeg" width="150" height="auto">
+        </div>
+        </div>
+        </div>
+        </div>
+        
+        
+      <div class="modal-footer">
+          <div>
+            <h5>Contribution</h5>
+        <p>Honeydew Limeade - Honeydew, Lime, Green Tea, White Peppercorn <br><br>This a non-alcoholic drink that combines several subtle flavors.</p><br>
+            <h5>Author</h5>
+        <p>Maggie Hoffman</p>
+          <h5>Publisher</h5>
+        <p>Ten Speed Press</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> <!-- end modal for Batch Cocktails -->    
+    
+
+<!-- Trigger for Cocktails With A Twist -->
+<div class="btn imageContainer p-4 m-3" data-bs-toggle="modal" data-bs-target="#CocktailsWithATwistModal" style="background: var(--mediumColor)">
+
+       <img src="BookCovers/CocktailsWithATwist.jpeg" style="filter: grayscale(100%)" alt="Cocktails With A Twist" width="200" height="auto">
+       <div class="overlay p-4">
+           <img src="BookCovers/CocktailsWithATwist.jpeg" width="202" height="auto">
+       </div>
+</div><!-- end modal for Cocktails With A Twist -->  
+
+    
+
+    
+    
+
+<!-- Trigger for Bartender's Manifesto -->
+<div class="btn imageContainer p-4 m-3" data-bs-toggle="modal" data-bs-target="#BartendersManifestoModal" style="background: var(--mediumColor)">
+     
+        <img src="BookCovers/Bartender'sManifesto.jpeg" style="filter: grayscale(100%)" alt="Bartender's Manifesto" width="200" height="auto">
+        <div class="overlay p-4">
+            <img src="BookCovers/Bartender'sManifesto.jpeg" width="202" height="auto">
+        </div>             
+</div>
+
+
+         
+         
+
+<div class="modal fade" id="BartendersManifestoModal" tabindex="-1" aria-labelledby="BartendersManifestoModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="BartendersManifestoModalLabel">Bartender's Manifesto</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+        
+      <div class="modal-body">
+       <img src="BookCovers/Bartender'sManifesto.jpeg" alt="Bartender's Manifesto" width="250" height="auto">
+   
+      </div>
+        
+        
+      <div class="modal-footer">
+          <div>
+            <h5>Contribution</h5>
+        <p>The Etiquette - Pisco, Lime, Raspberry, Aperol, Sparkling Wine <br><br>This is a a variation on the classic cocktail Airmail.</p><br>
+            <h5>Authors</h5>
+        <p>Toby Maloney, Emma Janzen</p>
+          <h5>Publisher</h5>
+        <p>Clarkson Potter</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> <!-- end modal for Bartender's Manifesto -->
+
+
+
+
+    
+<!-- Trigger for The Way We Ate -->
+<div class="btn imageContainer p-4 m-3" data-bs-toggle="modal" data-bs-target="#TheWayWeAteModal" style="background: var(--mediumColor)">
+       <img src="BookCovers/WayWeAte.jpeg" style="filter: grayscale(100%)" alt="The Way We Ate" width="200" height="auto">
+        <div class="overlay p-4">
+            <img src="BookCovers/WayWeAte.jpeg" width="202" height="auto">
+        </div>
+
+</div>
+
+
+<div class="modal fade" id="TheWayWeAteModal" tabindex="-1" aria-labelledby="TheWayWeAteModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="TheWayWeAteModalLabel">The Way We Ate</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+        
+      <div class="modal-body">
+       <img src="BookCovers/WayWeAte.jpeg" alt="The Way We Ate" width="250" height="auto">
+    
+      </div>
+        
+        
+      <div class="modal-footer">
+          <div>
+            <h5>Contribution</h5>
+        <p>Electric Gin - Beefeater Gin, Lime, Chartreuse and Tang Powder <br><br>The cocktail represents the year 1965, the same year that Bob Dylan went electric.</p><br>
+            <h5>Authors</h5>
+        <p>Noah Fecks, Paul Wagtouicz</p>
+          <h5>Publisher</h5>
+        <p>Simon & Schuster</p>
+        </div>
+      </div>
+        
+        
+    </div>
+  </div>
+</div> <!-- end modal for The Way We Ate -->     
+   
+    
+   
+    
+<!-- Trigger for Rogue Cocktails -->
+<div class="btn imageContainer p-4 m-3" data-bs-toggle="modal" data-bs-target="#RogueCocktailsModal" style="background: var(--mediumColor)">
+    
+     <img src="BookCovers/RogueCocktails.jpg" style="filter: grayscale(100%)" alt="Rogue Cocktails" width="200" height="auto">
+     <div class="overlay p-4"><img src="BookCovers/RogueCocktails.jpg" width="202" height="auto">
+     </div>
+        
+
+</div>
+
+<div class="modal fade" id="RogueCocktailsModal" tabindex="-1" aria-labelledby="RogueCocktailsLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="RogueCocktailsLabel">Rogue Cocktails</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+        
+      <div class="modal-body">
+       <img src="BookCovers/RogueCocktails.jpg" alt="Rogue Cocktails" width="250" height="auto">
+   
+  
+      </div>
+        
+        
+      <div class="modal-footer">
+          <div>
+            <h5>Contribution</h5>
+        <p>Clocka - Grappa, Honey, Orange Biters, Orange Flower Water, Mint <br><br>This is a type of Old Fashioned.</p><br>
+            <h5>Authors</h5>
+        <p>Kirk Estopinal, Maksym Pazuniak</p>
+          <h5>Publisher</h5>
+        <p>Blurb</p>
+        </div>
+      </div>
+        
+    </div>
+  </div>
+</div> <!-- end modal for Rogue Cocktails -->   
+    
+  
+<!-- Trigger for Beta Cocktails -->
+<div class="btn imageContainer p-4 m-3" data-bs-toggle="modal" data-bs-target="#BetaCocktailsModal" style="background: var(--mediumColor)">
+    <img src="BookCovers/BetaCocktails.jpg" style="filter: grayscale(100%)" alt="Beta Cocktails" width="200" height="auto">
+    <div class="overlay p-4">
+        <img src="BookCovers/BetaCocktails.jpg" width="202" height="auto">
+    </div>
+        
+</div>
+
+    
+
+<div class="modal fade" id="BetaCocktailsModal" tabindex="-1" aria-labelledby="BetaCocktailsLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="BetaCocktailsLabel">Beta Cocktails</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+        
+      <div class="modal-body">
+       <img src="BookCovers/BetaCocktails.jpg" alt="Beta Cocktails" width="250" height="auto">
+          
+      </div>
+        
+        
+            <div class="modal-footer">
+          <div>
+            <h5>Contribution</h5>
+        <p>Heart of Glass - Eagle Rare Bourbon, Carpano Antica, Cynar, Angostura Bitters, Orange Peel<br><br>This is a room temperature cocktails based on a Manhattan.</p><br>
+            <h5>Authors</h5>
+        <p>Kirk Estopinal, Maksym Pazuniak</p>
+          <h5>Publisher</h5>
+        <p>Blurb</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div> <!-- end modal for Beta Cocktails -->   
+    
+    
+    
+    
+ </div> <!-- end flex container for modals -->    
+    
+    
+<!--
+    
 <div id="firstBookModal" class="modal">
 
-  <!-- Modal content -->
+  <!-- Modal content 
   <div class="modalContent">
     <span class="selectClose">&times;</span>
     <p><b>Batch Cocktails by Maggie Hoffman</b></p>
     <p>
     <img src="BookCovers/BatchCocktails.jpeg" alt="Batch Cocktails" width="250" height="auto">
         <!--<div class="overlay"><img src="Book%20Covers/Batch%20Cocktails.jpeg" width="150" height="auto">
-        </div>-->
+        </div>
     </p>
     
     <br>
@@ -386,19 +721,19 @@ Became a recognized expert on Chartreuse
 
 <div id="secondBookModal" class="modal">
 
-  <!-- Modal content -->
+  <!-- Modal content 
   <div class="modalContent">
     <span class="selectClose">&times;</span>
     <p><b>Cocktails With a Twist by Kara...</b></p>
     <p>
     <img src="BookCovers/CocktailsWithATwist.jpeg" alt="Cockails with a Twist" width="250" height="auto">
         <!--<div class="overlay"><img src="Book%20Covers/Batch%20Cocktails.jpeg" width="150" height="auto">
-        </div>-->
+        </div>
     </p>
     
     <br>
     <p>
-        Overview:  Classic cocktails and variations on them
+        Overview:  Classic cocktails and variations on theme
     </p>
     <br>
     <br>
@@ -412,20 +747,20 @@ Became a recognized expert on Chartreuse
     
 <div id="thirdBookModal" class="modal">
 
-  <!-- Modal content -->
+  <!-- Modal content 
   <div class="modalContent">
     <span class="selectClose">&times;</span>
     <p><b>The Way We Ate... Paul and Noah...</b></p>
     <p>
     <img src="BookCovers/WayWeAte.jpeg" alt="The Way We Ate" width="250" height="auto">
         <!--<div class="overlay"><img src="Book%20Covers/Batch%20Cocktails.jpeg" width="150" height="auto">
-        </div>-->
+        </div>
     </p>
       
       
     <br>
     <p>
-        Food and drink recipes each representing a year over the previous century
+       Overview: Food and drink recipes each representing a year over the previous century
     </p>
     <br>
     <br>
@@ -439,7 +774,7 @@ Became a recognized expert on Chartreuse
     
 <div id="fourthBookModal" class="modal">
 
-  <!-- Modal content -->
+  <!-- Modal content 
   <div class="modalContent">
     <span class="selectClose">&times;</span>
     <p><b>Bartender's Manifesto by Toby Maloney and Emma Jansen...</b></p>
@@ -463,14 +798,14 @@ Became a recognized expert on Chartreuse
     
 <div id="fifthBookModal" class="modal">
 
-  <!-- Modal content -->
+  <!-- Modal content
   <div class="modalContent">
     <span class="selectClose">&times;</span>
     <p><b>Rogue Cocktails, Kirk and Maks...</b></p>
     <p>
     <img src="BookCovers/RogueCocktails.jpg" alt="Rogue Cocktails" width="250" height="auto">
         <!--<div class="overlay"><img src="Book%20Covers/Batch%20Cocktails.jpeg" width="150" height="auto">
-        </div>-->
+        </div>
     </p>
     
     <br>
@@ -480,8 +815,7 @@ Became a recognized expert on Chartreuse
     <br>
     <br>
       <p>
-	    My contribution: Part & Parcel - Vodka, Lime, Grapefruit, St-Germain, Lavender Bitters. This is a take on a Hemingway 
-          Daiquiri.
+	    My contribution: Clocka - Grappa, Honey, Orange Biters, Orange Flower Water, Mint. This is a type of Old Fashioned.
     </p>
   </div>
 
@@ -489,14 +823,14 @@ Became a recognized expert on Chartreuse
     
 <div id="sixthBookModal" class="modal">
 
-  <!-- Modal content -->
+  <!-- Modal content
   <div class="modalContent">
     <span class="selectClose">&times;</span>
     <p><b>Beta Cocktails by Kirk and Maks...</b></p>
     <p>
     <img src="BookCovers/BetaCocktails.jpg" alt="Beta Cocktails" width="250" height="auto">
         <!--<div class="overlay"><img src="Book%20Covers/Batch%20Cocktails.jpeg" width="150" height="auto">
-        </div>-->
+        </div>
     </p>
     
     <br>
@@ -516,7 +850,7 @@ Became a recognized expert on Chartreuse
     
     
     
-    
+    <!--
 <div class="flex-container">
     
     <div id="firstBook" class="imageContainer"> 
@@ -649,8 +983,21 @@ Became a recognized expert on Chartreuse
 
 </footer> <!-- end Footer --> 
     
+<!--    
+<div class=’cookie-banner’ style=’display: none’>
+<p>
+    By using this website, you agree to use of cookies.
+  </p>
+<button class=’close’>Got it</button>
+</div>    
+-->    
 <!-- script -->
 
+<!-- Footer -->
+<div class="mt-5 p-4 text-center" style="background-color: var(--darkColor); color: var(--mediumColor)">
+  <p>Copyright 2022 Troy Sidle | HoneydewLimeade</p>
+</div>
+    
 <script src="main.js"></script>
 
     
