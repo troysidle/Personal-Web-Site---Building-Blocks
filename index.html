@@ -1,45 +1,28 @@
 <!--*********************************************************************
 Author: Troy Sidle
 
-Version: 1.2.2
-This page uses Bootstrap.
+Version: 2.1.0
 
-This version has a home image as a background with text.
+This page uses Bootstrap 5.
 
-This scales well on a mobile device. It has a menu that is hidden, but can be displayed with a menu button.
+This site is hosted by Firebase.
 
-Google Font Montserrat has been added, bold is enabled, more format adjustments.
-
-Custom colors and other design elements added.
-
-Added icons for social media.
-
-Added more functionality for mobile devices - close navigation bar when clicking off of it
-
-More functionality and content added.
-
-Modals improved.
-
-Favicon created and added. New color feature on Hero image.
-
-Social Media buttons are now working.
-
-Cookies are implemented and a user cookie notice is added. Slight adjustments for mobile.
-
+copyright 2022
 *********************************************************************-->
 
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Bootstrap 5 with Mobile Menu</title>
+  <!--title displayed on browser tab-->
+  <title>HoneydewLimeade</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   
-  <!-- my stylesheet -->
+  <!-- HonewdewLimeade stylesheet -->
   <link href="stylesheet.css" rel="stylesheet">
   
-  <!-- Google Fonts for Montserrat -->    
+  <!-- Google Fonts for Montserrat typeface -->    
   <link href='https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap' rel='stylesheet'>      
     
   <!-- Favicon -->
@@ -49,47 +32,31 @@ Cookies are implemented and a user cookie notice is added. Slight adjustments fo
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 
-
-
 </head>
 <body>
 
     
-<!-- ======= Mobile nav toggle button ======= -->
-
-<i class="bi mobileNavigationToggleButton d-xl-none"> <!-- don't display on large screens -->
+<!-- Mobile navigation toggle button as custom bars -->
+<!-- don't display on large screens -->
+<i class="bi mobileNavigationToggleButton d-xl-none"> 
     
 <div>
-    <div class="menuBarRectangle">
+    <div class="menuBarRectangle"></div>
+    <div class="menuBarRectangle"></div>
+    <div class="menuBarRectangle"></div>
 </div>
-    <div class="menuBarRectangle">
-</div>
-    <div class="menuBarRectangle">
-</div>
-</div>
+    
 </i>
-        
     
-  <!-- off navigation menu area -->
-  <div id="clickOffNavigationBar" class="hideMenuArea d-xl-none"></div> <!-- don't display on large screens -->
+    
+    
+<!-- The off navigation menu area -->
+<!-- don't display on large screens -->
+<div id="clickOffNavigationBar" class="hideMenuArea d-xl-none">
+</div> 
 
 
-    
-    
-    
-<!-- Social Media Links 
-    
-    
-
-    <div class="socialMediaLinksContainer d-flex justify-content-end">
-            <div class="socialMediaLinksContainer2"></div>-->
-        
-            <!-- Cookies Notice Bar 
-<div class="d-flex cookiesBar position-sticky"></div>
-<div class="d-flex position-sticky cookiesBar top-50 start-0 translate-start"></div>
-    -->
-  
-<!-- Full Length Design Bar-->
+<!-- Full Width Design Bar-->
 <div class="container-fluid designBar">
     
 <!-- Cookies Notice -->
@@ -106,7 +73,7 @@ Cookies are implemented and a user cookie notice is added. Slight adjustments fo
   
 </div>
     
-  
+<!-- Social media links on Hero Image-->
   <div class="d-xl-flex p-3 bg-transparent socialMediaLinksContainer">
     
     <div class="p-0 flex-grow-1">
@@ -219,8 +186,7 @@ Cookies are implemented and a user cookie notice is added. Slight adjustments fo
 
 <section id="home" class="justify-content-center">
 
-<!--  -->    
-    
+
     
     
 <!-- profile image -->
@@ -255,9 +221,7 @@ Cookies are implemented and a user cookie notice is added. Slight adjustments fo
     
     
     
-
-    
-<!-- profile text -->
+    <!-- profile text -->
     
     <div class="heroText">
     
@@ -292,7 +256,7 @@ Cookies are implemented and a user cookie notice is added. Slight adjustments fo
         This is a personal site built from the bottom up, incorporating the building blocks of web development as I go.
     </p>
     <p>
-        Why HoneydewLimeade? It’s a nod to my career in the hospitality industry where I specialized in cocktails. Honeydew Limeade is one of the drinks I have published in Batch Cocktails by Maggie Hoffman.
+        Why HoneydewLimeade? It’s a nod to my career in the hospitality industry where I specialized in cocktails. Honeydew Limeade is one of the drinks published in Batch Cocktails by Maggie Hoffman.
     </p>
     <p>
         Working professionally in the hospitality industry for over 15 years, I honed skills of craftsmanship, discipline, and creativity. With a degree in computer science, I’m now utilizing those skills and applying them to web development.
@@ -502,6 +466,44 @@ Became a recognized expert on Chartreuse
   </div>
 </div> <!-- end modal for Batch Cocktails -->    
     
+    
+<!-- Cocktails With A Twist Modal -->
+<div class="modal fade" id="CocktailsWithATwistModal" tabindex="-1" aria-labelledby="CocktailsWithATwistModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 class="modal-title" id="CocktailsWithATwistModalLabel">Cocktails With A Twist</h3>
+             
+
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+        
+      <div class="modal-body">
+          <div class="d-flex">
+              <div>
+       <img class="mx-auto d-block" src="BookCovers/CocktailsWithATwist.jpeg" alt="Cocktails With A Twist" width="300" height="auto">
+        <div class="overlay"><img src="BookCovers/CocktailsWithATwist.jpeg" width="150" height="auto">
+        </div>
+        </div>
+        </div>
+        </div>
+        
+        
+      <div class="modal-footer">
+          <div>
+            <h5>Contribution</h5>
+        <p>Part & Parcel - Vodka, Lime, Grapefruit, St-Germain, Peychaud's Bitters<br><br>This is a variation on the classic cocktail Hemingway Daiquiri.</p><br>
+            <h5>Author</h5>
+        <p>Kara Newman</p>
+          <h5>Publisher</h5>
+        <p>Chronicle Books</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> <!-- end modal for Cocktails With A Twist -->    
+    
+    
 
 <!-- Trigger for Cocktails With A Twist -->
 <div class="btn imageContainer p-4 m-3" data-bs-toggle="modal" data-bs-target="#CocktailsWithATwistModal" style="background: var(--mediumColor)">
@@ -528,8 +530,7 @@ Became a recognized expert on Chartreuse
 
 
          
-         
-
+        
 <div class="modal fade" id="BartendersManifestoModal" tabindex="-1" aria-labelledby="BartendersManifestoModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
@@ -560,8 +561,6 @@ Became a recognized expert on Chartreuse
 
 
 
-
-    
 <!-- Trigger for The Way We Ate -->
 <div class="btn imageContainer p-4 m-3" data-bs-toggle="modal" data-bs-target="#TheWayWeAteModal" style="background: var(--mediumColor)">
        <img src="BookCovers/WayWeAte.jpeg" style="filter: grayscale(100%)" alt="The Way We Ate" width="200" height="auto">
@@ -692,196 +691,6 @@ Became a recognized expert on Chartreuse
  </div> <!-- end flex container for modals -->    
     
     
-<!--
-    
-<div id="firstBookModal" class="modal">
-
-  <!-- Modal content 
-  <div class="modalContent">
-    <span class="selectClose">&times;</span>
-    <p><b>Batch Cocktails by Maggie Hoffman</b></p>
-    <p>
-    <img src="BookCovers/BatchCocktails.jpeg" alt="Batch Cocktails" width="250" height="auto">
-        <!--<div class="overlay"><img src="Book%20Covers/Batch%20Cocktails.jpeg" width="150" height="auto">
-        </div>
-    </p>
-    
-    <br>
-    <p>
-        Overview: Recipes for drinks made in larger quantities
-    </p>
-    <br>
-    <br>
-      <p>
-	    My contribution: Honeydew Limeade - Honeydew, Lime, Green Tea, White Peppercorn. This is a non-alcoholic drink that combines several subtle flavors.
-    </p>
-  </div>
-
-</div>
-
-<div id="secondBookModal" class="modal">
-
-  <!-- Modal content 
-  <div class="modalContent">
-    <span class="selectClose">&times;</span>
-    <p><b>Cocktails With a Twist by Kara...</b></p>
-    <p>
-    <img src="BookCovers/CocktailsWithATwist.jpeg" alt="Cockails with a Twist" width="250" height="auto">
-        <!--<div class="overlay"><img src="Book%20Covers/Batch%20Cocktails.jpeg" width="150" height="auto">
-        </div>
-    </p>
-    
-    <br>
-    <p>
-        Overview:  Classic cocktails and variations on theme
-    </p>
-    <br>
-    <br>
-      <p>
-	    My contribution: Part & Parcel - Vodka, Lime, Grapefruit, St-Germain, Lavender Bitters. This is a take on a Hemingway 
-          Daiquiri.
-    </p>
-  </div>
-
-</div>
-    
-<div id="thirdBookModal" class="modal">
-
-  <!-- Modal content 
-  <div class="modalContent">
-    <span class="selectClose">&times;</span>
-    <p><b>The Way We Ate... Paul and Noah...</b></p>
-    <p>
-    <img src="BookCovers/WayWeAte.jpeg" alt="The Way We Ate" width="250" height="auto">
-        <!--<div class="overlay"><img src="Book%20Covers/Batch%20Cocktails.jpeg" width="150" height="auto">
-        </div>
-    </p>
-      
-      
-    <br>
-    <p>
-       Overview: Food and drink recipes each representing a year over the previous century
-    </p>
-    <br>
-    <br>
-      <p>
-	    My contribution: Electric Gin - Beefeater Gin, Lime, Chartreuse and Tang Powder. The cocktail represents the year 1965, the same year that Bob Dylan went electric.
-    </p>
-    
-  </div>
-
-</div>
-    
-<div id="fourthBookModal" class="modal">
-
-  <!-- Modal content 
-  <div class="modalContent">
-    <span class="selectClose">&times;</span>
-    <p><b>Bartender's Manifesto by Toby Maloney and Emma Jansen...</b></p>
-    <p>
-    <img src="BookCovers/Bartender'sManifesto.jpeg" alt="Bartender's Manifesto" width="250" height="auto">
-        
-    </p>
-    
-    <br>
-    <p>
-        Overview:  How to create original cocktails by Toby Maloney of The Violet Hour
-    </p>
-    <br>
-    <br>
-      <p>
-	    My contribution: The Etiquette - Pisco, Lime, Raspberry, Aperol, Sparkling Wine, a variation on the classic cocktail Airmail.
-    </p>
-  </div>
-
-</div>
-    
-<div id="fifthBookModal" class="modal">
-
-  <!-- Modal content
-  <div class="modalContent">
-    <span class="selectClose">&times;</span>
-    <p><b>Rogue Cocktails, Kirk and Maks...</b></p>
-    <p>
-    <img src="BookCovers/RogueCocktails.jpg" alt="Rogue Cocktails" width="250" height="auto">
-        <!--<div class="overlay"><img src="Book%20Covers/Batch%20Cocktails.jpeg" width="150" height="auto">
-        </div>
-    </p>
-    
-    <br>
-    <p>
-        Overview:  Unusual cocktails with common ingredients
-    </p>
-    <br>
-    <br>
-      <p>
-	    My contribution: Clocka - Grappa, Honey, Orange Biters, Orange Flower Water, Mint. This is a type of Old Fashioned.
-    </p>
-  </div>
-
-</div>
-    
-<div id="sixthBookModal" class="modal">
-
-  <!-- Modal content
-  <div class="modalContent">
-    <span class="selectClose">&times;</span>
-    <p><b>Beta Cocktails by Kirk and Maks...</b></p>
-    <p>
-    <img src="BookCovers/BetaCocktails.jpg" alt="Beta Cocktails" width="250" height="auto">
-        <!--<div class="overlay"><img src="Book%20Covers/Batch%20Cocktails.jpeg" width="150" height="auto">
-        </div>
-    </p>
-    
-    <br>
-    <p>
-        Overview:  An update of Rogue Cocktails.
-    </p>
-    <br>
-    <br>
-      <p>
-	    My contribution: Heart of Glass - Eagle Rare Bourbon, Carpano Antica, Cynar, Angostura Bitters, Orange Peel. This is a room temperature cocktails based on a Manhattan.
-    </p>
-  </div>
-
-</div>
-    
-
-    
-    
-    
-    <!--
-<div class="flex-container">
-    
-    <div id="firstBook" class="imageContainer"> 
-        <img src="BookCovers/BatchCocktails.jpeg" alt="Batch Cocktails" width="auto" height="300">
-    </div>
-
-    <div id="secondBook" class="imageContainer">
-        <img src="BookCovers/CocktailsWithATwist.jpeg" alt="Cocktails With a Twist" width="auto" height="300">
-    </div>
-
-    <div id="thirdBook" class="imageContainer">
-        <img src="BookCovers/WayWeAte.jpeg" alt="The Way We Ate" width="auto" height="300">
-    </div>
-    
-    <div id="fourthBook" class="imageContainer">
-        <img src="BookCovers/Bartender'sManifesto.jpeg" alt="Bartender's Manifesto" width="auto" height="300">
-    </div>
-    
-    <div id="fifthBook" class="imageContainer">
-        <img src="BookCovers/RogueCocktails.jpg" alt="Rogue Cocktails" width="225" height="auto">
-        <br>
-    </div>
-    
-    <div id="sixthBook" class="imageContainer">
-        <img src="BookCovers/BetaCocktails.jpg" alt="Beta Cocktails" width="225" height="auto">
-        <div class="overlay"><img src="BookCovers/BetaCocktails.jpg" width="230" height="auto">
-        </div>
-        
-    </div>
-
-</div>
 
 <!--Book Images-->
 
