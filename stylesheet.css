@@ -191,9 +191,10 @@ create a background image so that text can be placed on top.
   height: 700px;
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
-  position: relative;
+  background-size: cover;  
+  position: relative; /*relative*/
   -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+  z-index: 1;
   filter: grayscale(100%);
 }
 
@@ -225,7 +226,7 @@ create a background image so that text can be placed on top.
 
 .cookiesNoticeWindow {
   text-align: left;
-  position: absolute;
+  position: sticky;
   top: 20%;
   left: 30%;
   transform: translate(-50%, -50%);
@@ -236,7 +237,7 @@ create a background image so that text can be placed on top.
 
 
 /*--------------------------------------------*/
-.mainCategory:nth-of-type(odd) {
+.mainCategory:nth-of-type(even) {
     min-height: 400px;
     padding: 40px;
     display: flex;
@@ -248,7 +249,7 @@ create a background image so that text can be placed on top.
     color: var(--darkColor);
   }
 
-  .mainCategory:nth-of-type(even) {
+  .mainCategory:nth-of-type(odd) {
     min-height: 200px;
     padding: 40px;
     display: flex;
@@ -309,6 +310,31 @@ create a background image so that text can be placed on top.
 
 #body {
     left: var(--navigationBarWidth);  
+}
+
+.body{
+    position: relative;
+}
+
+.floatingObjectHolder{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0px;
+        z-index: 100000;
+        background: clear;
+        opacity: 0.9;
+        border-radius: 5px;
+}
+
+
+.cookieObject{
+        position: sticky;
+        min-height: 42px;
+        top: 0;
+        z-index: 20000000;
+        background: blue;
+        opacity: 0.6;
 }
 
 #main {
@@ -486,19 +512,6 @@ create a background image so that text can be placed on top.
 
 
 
-/* Cookies */
-
-.cookiesBar{
-
-    top: 500px;
-    height: 30px;
-    padding: 0;
-    margin: 0;
-    background-color: var(--baseColor);
-
- 
-
-}
 
 .designBar {
     position: absolute;
@@ -507,8 +520,49 @@ create a background image so that text can be placed on top.
     background-color: var(--baseColor);
     min-height: 42px;
 }
+.designBarA {
+    position: absolute;
+    top: 205px;
+    z-index: 10000;
+    background-color: orange;
+    min-height: 200px;
+    opacity: .5;
+}
+.designBarB {
+    position: absolute;
+    z-index: 10000;
+    background-color: yellow;
+    height: 100%;
+    opacity: .5;
+}
 
 
+/* Cookies */
+
+
+.cookiesBar {
+    position: sticky;
+    top: 0px;
+    z-index: 10001;
+    background-color: var(--baseColor);
+    height: 42px;
+}
+
+.stickyContainerBuffer{
+    position: absolute;
+    z-index: 100000;
+    background-color: purple;
+    opacity: .9;
+    height: 600px;
+}
+
+.stickyContainer{
+    position: relative;
+    z-index: 100000;
+    background-color: blue;
+    opacity: .9;
+    height: 100%;
+}
 
 .cookiesBar2{
       position: sticky;
@@ -539,6 +593,7 @@ create a background image so that text can be placed on top.
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
+  z-index: 10000;
   background: blue;
 
 }
@@ -556,6 +611,7 @@ create a background image so that text can be placed on top.
   transition: .125s ease;
   opacity:0;
   color: white;
+  z-index: 200000;
   font-size: 20px;
   text-align: center;
 
@@ -582,6 +638,6 @@ create a background image so that text can be placed on top.
 
 .footer {
   margin-left: var(--navigationBarWidth); /* Same as the width of the sidenav */
-  padding: 0px 180px;
+  padding: 0px 0px;
   background-color: var(--darkColor);
 }
