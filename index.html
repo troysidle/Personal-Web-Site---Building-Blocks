@@ -2,7 +2,7 @@
 Author: Troy Sidle
 copyright 2022
 
-Version: 2.1.1x
+Version: 2.1.1
 
 This page uses Bootstrap 5.
 
@@ -10,9 +10,22 @@ This site is hosted by Firebase.
 
 Removed "Under Construction", reworked the cookies notice.
 
-Correctluy working div for the cookies notice (in blue). Still restructuring modals and links.
-
 *********************************************************************-->
+
+
+<!--
+Z-index order
+
+500 cookies notice
+400 design bar
+375 color image
+350 black and white image
+300 modal
+200 nav menu
+
+
+
+-->
 
 
 <!DOCTYPE html>
@@ -43,7 +56,10 @@ Correctluy working div for the cookies notice (in blue). Still restructuring mod
     
 <div class="floatingObjectHolder">
     <div class="marginObject" style="height: 635px;"></div>
-    <div class="cookieObject"></div>
+    <div class="cookieObject text-center" style="color: yellow;">
+   
+        <button type="button" style="background-color: black;">button</button>
+    </div>
     
 </div>    
     
@@ -469,7 +485,7 @@ Became a recognized expert on Chartreuse
     
 <div class="d-flex flex-wrap"> <!-- container for all the images to move around in as the window is resized. -->
     
-<!--Book Images-->    
+    
 <!-- Trigger for Batch Cocktails Modal-->
 <div class="btn imageContainer p-4 m-3" data-bs-toggle="modal" data-bs-target="#BatchCocktailsModal" style="background: var(--mediumColor)">
     <img src="BookCovers/BatchCocktails.jpeg" style="filter: grayscale(100%)" alt="Temp Portfolio Photo" width="200" height="auto">
@@ -477,6 +493,8 @@ Became a recognized expert on Chartreuse
         <img src="BookCovers/BatchCocktails.jpeg" width="202" height="auto">
     </div>
 </div>
+    
+    
 
 <!-- Batch Cocktails Modal -->
 <div class="modal fade" id="BatchCocktailsModal" tabindex="-1" aria-labelledby="BatchCocktailsModalLabel" aria-hidden="true">
@@ -561,11 +579,7 @@ Became a recognized expert on Chartreuse
            <img src="BookCovers/CocktailsWithATwist.jpeg" width="202" height="auto">
        </div>
 </div><!-- end modal for Cocktails With A Twist -->  
-
-    
-
-    
-    
+ 
 
 <!-- Trigger for Bartender's Manifesto -->
 <div class="btn imageContainer p-4 m-3" data-bs-toggle="modal" data-bs-target="#BartendersManifestoModal" style="background: var(--mediumColor)">
@@ -736,17 +750,15 @@ Became a recognized expert on Chartreuse
     
     
     
-</div> <!-- end flex container for modals -->    
-    
+ </div> <!-- end flex container for modals -->    
     
 
-
+<!--Book Images-->
 
     
 </section> <!-- end Publications Section -->
 
   
-
 </main>
 
     
