@@ -236,7 +236,7 @@ create a background image so that text can be placed on top.
 
 
 /*--------------------------------------------*/
-.mainCategory:nth-of-type(odd) {
+.mainCategory:nth-of-type(even) {
     min-height: 400px;
     padding: 40px;
     display: flex;
@@ -248,7 +248,7 @@ create a background image so that text can be placed on top.
     color: var(--darkColor);
   }
 
-  .mainCategory:nth-of-type(even) {
+  .mainCategory:nth-of-type(odd) {
     min-height: 200px;
     padding: 40px;
     display: flex;
@@ -508,29 +508,30 @@ create a background image so that text can be placed on top.
 
 .cookiesBarHold {
     position: fixed;
-    top: 635px;
-    z-index: 10001;
+    top: 85%;
+    z-index: 10003;
     min-height: 42px;
+    background-color: clear;
+    opacity:.7;
 }
 
-.cookiesBar3 {
-    position: fixed;
-    top: 635px;
-    z-index: 10001;
-    background-color: var(--baseColor);
-    min-height: 42px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+
+.cookiesBar3{
+        min-height: 42px;
+        justify-content: center;
+        align-items: center;
+        z-index: 10003;
+        background-color: var(--baseColor);
+        padding: 7px;
 }
+
 
 .cookieObject{
       
         min-height: 75px;
         top: 0;
         z-index: 501;
-        background: blue;
-        opacity: 0.6;
+        background: clear;
         display: flex;
         justify-content: center;
         align-items: center;
