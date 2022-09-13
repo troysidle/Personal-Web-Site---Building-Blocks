@@ -1,11 +1,13 @@
 <!--*********************************************************************
 Author: Troy Sidle
 
-Version: 2.1.0
+Version: 2.1
 
 This page uses Bootstrap 5.
 
 This site is hosted by Firebase.
+
+Redesign cookies notice.
 
 copyright 2022
 *********************************************************************-->
@@ -57,21 +59,24 @@ copyright 2022
 
 
 <!-- Full Width Design Bar-->
-<div class="container-fluid designBar">
+    <div class="container-fluid designBar"></div>
     
-<!-- Cookies Notice -->
-<!--<div id="cookieNotice" class="text-end" style="display: none;">-->
-  <div class="d-flex">
-      <!--<div class="p-1"><!--<p class="fs-6">
-      This site uses cookies to store your preferences.</p>
-          </div>-->
-                <!--<div class="acceptCookiesButton text-center" onclick="acceptCookieConsent();">Got it.</div>-->
+<!-- Cookie Bar-->
+
+<div class="cookiesBarHold" style="width: 100%; justify-content: center;">
+    
+    <!-- Cookies Notice -->
+    <div id="cookieNotice" class="container-fluid cookiesBar3" style="display: none; text-align: center">
+           <p>
+        This site uses cookies to store your preferences.
+        <button type=button class="acceptCookiesButton2 text-center" onclick="acceptCookieConsent();">Got it</button>
+        </p>
+     
     </div>
-<!--</div>-->
+    
+    </div>
     
 
-  
-</div>
     
 <!-- Social media links on Hero Image-->
   <div class="d-xl-flex p-3 bg-transparent socialMediaLinksContainer">
@@ -136,9 +141,7 @@ copyright 2022
     <div class="p-5 m-3 bg-transparent"></div> 
  </div>
     
-<!-- Delete this?-->
-<div class="flex-container">
-</div>
+
     
     
 
@@ -146,7 +149,7 @@ copyright 2022
     
 <!-- Header  -->
     
-  <header id="header">
+<header id="header">
     <div class="d-flex flex-column">
       
       <!-- Logo -->
@@ -182,7 +185,13 @@ copyright 2022
   </header><!-- End Header -->
 
     
-<!-- home -->    
+
+    
+    
+<main id="main">    
+    
+    
+    <!-- home -->    
 
 <section id="home" class="justify-content-center">
 
@@ -195,29 +204,6 @@ copyright 2022
     
 
 
-        
-    <!-- under construction notice -->
-    
-    <div class="underConstruction p-3 text-center">
-    HoneydewLimeade is under construction.
-    <br>
-    <br>
-    Follow along with the process on <a style="color: var(--contrastColor)" href="http://medium.com/@troysidle">Medium</a>.
-<!--<div class="p-1"><p class="fs-6">
-        This site uses cookies to store your preferences.</p>
-        </div>
-        <div class="acceptCookiesButton text-center" onclick="acceptCookieConsent();">Got it.</div>-->
-    </div>
-    
-    <!-- Cookies Notice -->
-    <div id="cookieNotice" style="display: none;" class="cookiesNoticeWindow p-3">
-        <div class="p-1 justify-content-center align-items-center">
-        <div class="p-1"><p class="fs-6">
-        This site uses cookies to store your preferences.</p>
-        </div >
-        <div class="acceptCookiesButton text-center" onclick="acceptCookieConsent();">Got it.</div>
-        </div>
-    </div>
     
     
     
@@ -234,12 +220,6 @@ copyright 2022
 </div> <!-- end profile image -->
 
 </section> <!-- end home -->
-    
-    
-<main id="main">    
-    
-    
-    
     
 <!-- About Section -->    
     
@@ -288,7 +268,7 @@ copyright 2022
 </h3>
 <br>
 <h4>Skin Contact, New York, NY</h4>							
-<p>7/2020 – Current</p>
+<p>7/2022 – Current</p>
 <p>
 Server 
 </p>
@@ -673,7 +653,7 @@ Became a recognized expert on Chartreuse
             <div class="modal-footer">
           <div>
             <h5>Contribution</h5>
-        <p>Heart of Glass - Eagle Rare Bourbon, Carpano Antica, Cynar, Angostura Bitters, Orange Peel<br><br>This is a room temperature cocktails based on a Manhattan.</p><br>
+        <p>Heart of Glass - Eagle Rare Bourbon, Carpano Antica, Cynar, Angostura Bitters, Orange Peel<br><br>This is a room temperature cocktail based on a Manhattan.</p><br>
             <h5>Authors</h5>
         <p>Kirk Estopinal, Maksym Pazuniak</p>
           <h5>Publisher</h5>
@@ -701,109 +681,11 @@ Became a recognized expert on Chartreuse
 
 </main>
 
-
-<!--
-<!-- Footer  --
-    
-<footer id="footer" class="footer">
-    
-<br>
-
-<!-- add this back to add Change Color Scheme --
-<div>
-  <img style="vertical-align:middle" src="Image%20Color%20Dial%20(1).png">
-  <span style="color: var(--baseColor)">Change Color Scheme</span>
-</div>
-
-
-    
-    <!--This table holds three color schemes.  --
-<table style="width: 600px; border: 10px solid lightblue);">
-  <tr class="colorSchemeContainer2">
-    <td class="colorSchemeContainer">
-        
-        <!--This table holds five colors of type A --
-        <div class="tooltip"> 
-             
-        <table class="colorSchemeContainer2" style="width: 200px; height: 10px;" onclick="setTheme('monochromeGreen')">
-    <tr>
-    <td style="background-color: var(--mediumMonochromeGreen)"></td>
-    <td style="background-color: var(--lightMonochromeGreen)"></td>
-        <td style="background-color: var(--baseColorMonochromeGreen)"></td>
-        <td style="background-color: var(--darkMonochromeGreen)"></td>
-        <td style="background-color: var(--contrastMonochromeGreen)"></td>
-    </tr>
-        </table>
-         <span class="tooltiptext">Monochrome Green</span>
-            </div>
-
-    </td> 
-    <td class="colorSchemeContainer">
-    
-        <!--This table holds five colors of type B --
-        
-        
-        <div class="tooltip"> 
-
-        
-        
-        <table class="colorSchemeContainer2" style="width: 200px; height: 10px;" onclick="setTheme('complementaryProduce')">
-    <tr>
-    <td style="background-color: var(--mediumComplementaryProduce)"></td>
-    <td style="background-color: var(--lightComplementaryProduce)"></td>
-        <td style="background-color: var(--baseColorComplementaryProduce)"></td>
-        <td style="background-color: var(--darkComplementaryProduce)"></td>
-        <td style="background-color: var(--contrastComplementaryProduce)"></td>
-    </tr>
-        </table>
-              <span class="tooltiptext">Purples and Oranges</span>
-            </div>
-    </td>
-    <td class="colorSchemeContainer">
-
-
-        
-        <!--This table holds five colors of type C --
-        
-        <div class="tooltip"> 
-        
-        <table class="colorSchemeContainer2" style="width: 200px; height: 10px;" onclick="setTheme('complementaryVista')">
-
-    <tr>
-    <td style="background-color: var(--mediumComplementaryVista)"></td>
-    <td style="background-color: var(--lightComplementaryVista)"></td>
-        <td style="background-color: var(--baseColorComplementaryVista)"></td>
-        <td style="background-color: var(--darkComplementaryVista)"></td>
-        <td style="background-color: var(--contrastComplementaryVista)"></td>
-    </tr>
-        </table>
-        <span class="tooltiptext">Blues and Yellows</span>
-            </div>
-    </td>
-  </tr>
-</table>
-
-<br>
-    
-    <!--Provide Buttons to use the changeScheme to alter the apearance of "content" --
-        
-<br>
     
 
-</footer> <!-- end Footer --> 
     
-<!--    
-<div class=’cookie-banner’ style=’display: none’>
-<p>
-    By using this website, you agree to use of cookies.
-  </p>
-<button class=’close’>Got it</button>
-</div>    
--->    
-<!-- script -->
-
 <!-- Footer -->
-<div class="mt-5 p-4 text-center" style="background-color: var(--darkColor); color: var(--mediumColor)">
+<div class="p-4 text-center" style="background-color: var(--darkColor); color: var(--mediumColor)">
   <p>Copyright 2022 Troy Sidle | HoneydewLimeade</p>
 </div>
     

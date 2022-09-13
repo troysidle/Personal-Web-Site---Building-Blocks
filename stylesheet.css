@@ -496,8 +496,6 @@ create a background image so that text can be placed on top.
     margin: 0;
     background-color: var(--baseColor);
 
- 
-
 }
 
 .designBar {
@@ -508,24 +506,43 @@ create a background image so that text can be placed on top.
     min-height: 42px;
 }
 
-
-
-.cookiesBar2{
-      position: sticky;
-        top: 450px;
-       height: 100px;
-    background-color: var(--baseColor);
-        z-index: 120000;
+.cookiesBarHold {
+    position: fixed;
+    top: 635px;
+    z-index: 10001;
+    min-height: 42px;
 }
 
+.cookiesBar3 {
+    position: fixed;
+    top: 635px;
+    z-index: 10001;
+    background-color: var(--baseColor);
+    min-height: 42px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cookieObject{
+      
+        min-height: 75px;
+        top: 0;
+        z-index: 501;
+        background: blue;
+        opacity: 0.6;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+}
+
+
+
 .acceptCookiesButton {
-  width: 70px;
-  height: 25px;
+
   background-color: var(--mediumColor); 
   color: var(--contrastColor);
-  outline: 1.3px solid grey;
-  margin-right: 13px;
-  margin-left: 13px;
+
 
 }
 

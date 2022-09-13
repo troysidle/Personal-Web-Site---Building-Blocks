@@ -126,7 +126,7 @@ function acceptCookieConsent(){
 
 let cookie_consent = getCookie("user_cookie_consent");
 if(cookie_consent != ""){
-    document.getElementById("cookieNotice").style.display = "none"; //change block to none when not testing
+    document.getElementById("cookieNotice").style.display = "block"; //change block to none when not testing
 }else{
     document.getElementById("cookieNotice").style.display = "block";
 }
